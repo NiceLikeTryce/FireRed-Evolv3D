@@ -44,7 +44,29 @@ def tool(name: str) -> str:
     return name
 
 
-def defined_symbols(obj: Path) -> dict[str, int]:
+def defined_symbols(obj: Path, section: str | None = None) -> dict[str, int]:
+    # A resident data object may also declare BSS (for example audio tracks).
+    # Those definitions belong to native C, not at the same offset in the blob.
+    # Keep only globals from the actual bundled section when it is specified.
+    if section is not None:
+        headers = subprocess.check_output([tool("arm-none-eabi-readelf"), "--wide", "--section-headers", str(obj)], text=True)
+        section_id = None
+        for line in headers.splitlines():
+            match = re.match(r"\s*\[\s*(\d+)\]\s+(\S+)", line)
+            if match and match[2] == section:
+                section_id = match[1]
+                break
+        if section_id is None:
+            raise ValueError(f"{obj}: missing bundled section {section}")
+        symbols = subprocess.check_output([tool("arm-none-eabi-readelf"), "--wide", "--symbols", str(obj)], text=True)
+        result = {}
+        for line in symbols.splitlines():
+            parts = line.split()
+            if len(parts) >= 8 and parts[0].endswith(":") and parts[4] == "GLOBAL" and parts[6] == section_id:
+                name = parts[7]
+                if not name.startswith("$") and "." not in name:
+                    result[name] = int(parts[1], 16)
+        return result
     out = subprocess.check_output([tool("arm-none-eabi-nm"), "--defined-only", str(obj)],
                                   text=True, errors="ignore")
     result: dict[str, int] = {}
@@ -141,7 +163,7 @@ class Bundle:
             # Keep the next object word aligned so its own tables stay aligned.
             while len(data) % 4:
                 data.append(0)
-            for name, value in defined_symbols(obj).items():
+            for name, value in defined_symbols(obj, self.section).items():
                 if name in offsets:
                     raise SystemExit("%s: %s is defined by two objects" % (self.tag, name))
                 offsets[name] = total + value

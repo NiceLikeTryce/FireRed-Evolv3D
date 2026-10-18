@@ -19,3 +19,9 @@ its dedicated audio bridge is implemented.
 The complete existing `3ds_port/` backend remains available for the full port.
 Its own game-side modules currently depend on Emerald; they must be adapted
 against FireRed Evolved's actual engine and ABI before a playable build exists.
+
+
+Native gameplay services are now available on feature/native-gameplay: fixed-width
+runtime/input/video/audio, exact resident payload relocation and256-colour text.
+The private game integration owns all game code/assets and whole-game tests.
+No executable game or generated game pack is distributed from this source fork.

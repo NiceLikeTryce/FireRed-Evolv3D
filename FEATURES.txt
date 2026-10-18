@@ -10,3 +10,8 @@
 - Native FireRed engine-core provider interface.
 - Synthetic host tests and diagnostic 3DSX build.
 - No playable FireRed release yet.
+
+- Native frame presentation and stereo PCM transport.
+- DSP-free stereo fallback.
+- Checked resident payload relocation.
+- Correct 256-colour text backgrounds.

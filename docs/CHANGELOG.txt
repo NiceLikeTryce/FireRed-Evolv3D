@@ -1,3 +1,35 @@
+FireRed Evolved3DS - native gameplay support
+
+LATEST CHANGES
+- Add native video/audio services.
+- Decode256-colour backgrounds.
+- Validate resident payloads.
+
+Native gameplay support
+Keep this work on feature/native-gameplay in the PRIVATE platform repository.
+The game remains in its private feature/3ds-port integration. Neither main branch
+nor public GBA distribution changes. No game assets or binary are committed here.
+
+Add a plain fixed-width runtime boundary: framebuffer presentation, input,
+RomFS payload loading, SD logging and native PCM output. Prefer NDSP; when DSP
+firmware is unavailable, use two acquired CSND channels and a primed stereo ring.
+The private game frame pump now supplies701 stereo samples per frame. Native
+Azahar testing confirms CSND starts with nonzero stereo PCM, not just a ready flag.
+The current tests do not claim a listening or long-duration drift qualification.
+
+Resident data relocation validates magic/version, region and exact file sizes,
+counts and relocation sites. It supports the unaligned pointers in game scripts.
+Only symbols in the bundled section become resident offsets; BSS/native audio
+state and absolute symbols stay out of that namespace. Targeted host/SDK tests
+cover malformed inputs and a real assembled mixed-section regression fixture.
+
+Decode256-colour text backgrounds with scrolling, map sizes, flip bits, window
+clipping and saturated colour effects. Host tests inspect153600 pixels plus
+specific blend/brightness/flip/window cases. Preserve existing input/DMA/colour
+contracts. CI cross-compiles the actual runtime in addition to its diagnostic.
+The full private integration clean-builds and runs actual FireRed gameplay;
+qualification remains in progress. This platform repository alone is no game.
+
 FireRed Evolved 3DS - native-core milestone1
 
 LATEST CHANGES
