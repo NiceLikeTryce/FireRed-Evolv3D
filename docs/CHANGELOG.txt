@@ -1,3 +1,25 @@
+FireRed-Evolv3D - Emerald renderer controls
+
+LATEST CHANGES
+- Reuse Emerald voxel settings.
+- Validate camera control boundaries.
+
+DETAILED CHANGES AND VALIDATION
+Add a source-only scalar adapter around the original Emerald3DS voxel toggle,
+pitch and zoom setters. Retain its supported 34/37/40/43/46 degree angles,
+90/100/110/120 percent zoom, wrap/reverse behavior and persistent settings writer.
+Expose only renderer controls implemented by the FireRed presenter; no blur,
+voxel battles, cheats or gameplay settings are advertised by this adapter.
+The FireRed integration adapts the SD namespace and keeps its own RTC/day/night
+logic. Renderer controls do not apply donor gameplay/save structures or change
+the clock. Host tests link the actual original settings implementation, exercise
+all camera steps, reverse, disabled controls, malformed values and invalid rows.
+All platform host checks pass. Actual game touchscreen/restart checks remain
+recorded in the private game integration. Main stays unchanged; no game data or
+binary enters this source-only repository.
+
+PRESERVED HISTORY
+
 FireRed-Evolv3D - project identity
 
 LATEST CHANGES

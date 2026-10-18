@@ -15,3 +15,6 @@
 - DSP-free stereo fallback.
 - Checked resident payload relocation.
 - Correct 256-colour text backgrounds.
+
+- Emerald3DS voxel controls with bounded camera steps.
+- Shared persistent renderer settings for the FireRed adapter.

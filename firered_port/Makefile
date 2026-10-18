@@ -22,6 +22,8 @@ check:
 	$(BUILD)/render_test
 	$(HOSTCC) -std=c11 -O2 -Wall -Wextra -Werror $(INCLUDES) tests/payload_test.c src/payload.c -o $(BUILD)/payload_test
 	cd $(BUILD) && ./payload_test
+	$(HOSTCC) -std=c11 -O2 -Wall -Wextra -Werror -pthread $(INCLUDES) -I$(SDK_ROOT)/3ds_port/tests/settings_host tests/voxel_options_test.c src/voxel_options.c -o $(BUILD)/voxel_options_test
+	$(BUILD)/voxel_options_test
 port-check:
 	@mkdir -p $(BUILD)
 	$(CC) $(ARCH) -O2 -std=gnu11 -Wall -Wextra -Werror $(INCLUDES) -I$(DEVKITPRO)/libctru/include -D__3DS__ $(EXTRA_FLAGS) $(CURDIR)/src/port_check_3ds.c $(CORE) $(EXTRA_SOURCES) $(EXTRA_OBJECTS) -L$(DEVKITPRO)/libctru/lib -lctru -lm -specs=3dsx.specs -Wl,-Map,$(BUILD)/port-check.map -o $(BUILD)/port-check.elf
