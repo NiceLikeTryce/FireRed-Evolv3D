@@ -1,0 +1,8 @@
+{
+  "upstream_repository": "https://github.com/ZallaxDev/emerald-3ds",
+  "upstream_commit": "b198c08defb94081ae995796cf75ab8cdb51f2d0",
+  "sdk_image": "devkitpro/devkitarm@sha256:15b79ce75822c289538d8153da5fa7aafe5e6adc32ad8a575a197beca0f0761b",
+  "bridge_abi": 1,
+  "stage": "native-core-integration",
+  "playable": false
+}

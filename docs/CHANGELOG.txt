@@ -1,0 +1,36 @@
+FireRed Evolved 3DS - native-core milestone1
+
+LATEST CHANGES
+- Fork3DS backend.
+- Add FireRed platform bridge.
+- Build native-core diagnostics.
+
+DETAILED HISTORY
+
+Begin a separate native Nintendo 3DS port using the preserved Emerald 3DS platform
+source. Pin upstream b198c08defb94081ae995796cf75ab8cdb51f2d0 and the official
+SDK image in firered_port/port.lock.json. Preserve licences, source history and
+all existing backend modules. Replace the repository's player-facing README
+with accurate FireRed development status; the retained Emerald builder must
+never be presented as a FireRed installer.
+
+Implement a plain-C native-game boundary, aligned virtual GBA register/video/
+palette/OAM/EWRAM/IWRAM memory, GBA key conversion through the existing3DS input
+decoder, CPU copy/fill operations and immediate/VBlank/HBlank repeating DMA.
+Reject unsupported FIFO/audio requests rather than silently claiming support.
+Use640-bank FireRed and512-bank imported Emerald selectors with 32-bit FireRed
+attributes. Guard invalid IDs, short buffers and 32-bit attribute-offset overflow.
+Retain original video decode helpers and expose their real CtrVideoMemory layout.
+
+Host tests cover input, memory views, copies/fills, delayed/repeating DMA,
+all 2048 bank/ID combinations and all 65536 packed map blocks. The target builds
+a native ARM11 diagnostic 3DSX. It explicitly says NOT A PLAYABLE GAME BUILD and
+has no game/save loader. An independent private integration links actual FireRed
+RNG/tasks and guards original map/sprite/save ABI; no game source/assets are
+copied into this public fork. Whole-game startup, resources, scripting, audio,
+save storage, menus and Kanto voxel models are not complete.
+
+Keep public CI source-only and data-free. Do not build/upload a renamed Emerald
+engine as a FireRed game. Preserve the stable game and public BPS patcher.
+The older native.GBA voxel experiment is retired separately; its tags/builds
+remain historical and no new.GBA voxel program is produced.

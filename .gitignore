@@ -42,3 +42,4 @@ __pycache__/
 session-*.md
 .public-denylist
 .DS_Store
+/firered_port/build/

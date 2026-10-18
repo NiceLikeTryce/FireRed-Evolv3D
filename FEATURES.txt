@@ -1,0 +1,11 @@
+# FireRed Evolved 3DS development
+
+- Native Nintendo 3DS platform port in progress.
+- Input and video decoder bridge.
+- Virtual GBA hardware memory for native game code.
+- BIOS copies and immediate/deferred/repeating DMA.
+- FireRed 640 and imported Emerald 512 bank selectors.
+- Bounds-checked32-bit metatile attributes.
+- Native FireRed engine-core provider interface.
+- Synthetic host tests and diagnostic 3DSX build.
+- No playable FireRed release yet.
