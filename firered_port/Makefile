@@ -25,9 +25,9 @@ check:
 port-check:
 	@mkdir -p $(BUILD)
 	$(CC) $(ARCH) -O2 -std=gnu11 -Wall -Wextra -Werror $(INCLUDES) -I$(DEVKITPRO)/libctru/include -D__3DS__ $(EXTRA_FLAGS) $(CURDIR)/src/port_check_3ds.c $(CORE) $(EXTRA_SOURCES) $(EXTRA_OBJECTS) -L$(DEVKITPRO)/libctru/lib -lctru -lm -specs=3dsx.specs -Wl,-Map,$(BUILD)/port-check.map -o $(BUILD)/port-check.elf
-	$(DEVKITPRO)/tools/bin/3dsxtool $(BUILD)/port-check.elf $(BUILD)/FireRedEvolved3DS-port-check.3dsx
+	$(DEVKITPRO)/tools/bin/3dsxtool $(BUILD)/port-check.elf $(BUILD)/FireRed-Evolv3D-port-check.3dsx
 clean:
-	rm -f $(BUILD)/bridge_test $(BUILD)/port-check.elf $(BUILD)/port-check.map $(BUILD)/FireRedEvolved3DS-port-check.3dsx
+	rm -f $(BUILD)/bridge_test $(BUILD)/port-check.elf $(BUILD)/port-check.map $(BUILD)/FireRed-Evolv3D-port-check.3dsx
 
 .PHONY: runtime-check
 runtime-check:

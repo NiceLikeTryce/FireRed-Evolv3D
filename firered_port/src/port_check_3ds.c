@@ -9,7 +9,7 @@ Fr3dsCoreInfo Fr3ds_CoreInfo(void){Fr3dsCoreInfo i={"platform bridge only",false
 #endif
 int main(void) {
     gfxInitDefault();consoleInit(GFX_TOP,NULL);
-    printf("FireRed Evolved3DS\nNative port check\n\nNOT A PLAYABLE GAME BUILD\n");
+    printf("FireRed-Evolv3D\nNative port check\n\nNOT A PLAYABLE GAME BUILD\n");
     Fr3ds_ResetHardware();Fr3ds_CoreInit();
     while(aptMainLoop()) {
         hidScanInput();circlePosition stick;hidCircleRead(&stick);touchPosition touch;hidTouchRead(&touch);

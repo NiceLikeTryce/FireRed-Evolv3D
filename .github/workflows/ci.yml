@@ -32,5 +32,5 @@ jobs:
       - name: Cross-compile source-only diagnostic
         run: make -C firered_port port-check runtime-check
       - name: Require diagnostic3DSX header
-        run: python3 -c "from pathlib import Path; p=Path('firered_port/build/FireRedEvolved3DS-port-check.3dsx'); assert p.read_bytes()[:4]==b'3DSX'"
+        run: python3 -c "from pathlib import Path; p=Path('firered_port/build/FireRed-Evolv3D-port-check.3dsx'); assert p.read_bytes()[:4]==b'3DSX'"
       # No game checkout, game assets, publication or uploaded binaries.

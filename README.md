@@ -1,29 +1,21 @@
-# Pokémon FireRed Evolved — 3DS port
+# FireRed-Evolv3D
 
-**Work in progress. There is no playable FireRed3DS build yet.**
+Private native Nintendo3DS project combining FireRed Evolved gameplay, an adapted
+Emerald3DS world renderer and Twin Embers touch-interface work. Current integration
+is in qualification; this is not a fully qualified campaign release.
 
-This 3DS development repository is private. Development builds and integration
-stay private; the existing GBA patcher is a separate project.
+This repository holds the source-only platform/backend. The actual game engine,
+Evolved data, native UI bindings, generated Kanto assets and tested game packages
+stay in the private game repository on feature/3ds-twin-embers-voxel. The platform
+branch is feature/twin-embers-voxel. Both main branches and public GBA delivery
+remain unchanged. No original game assets, saves, ROMs or generated game packs
+are added to this platform repository.
 
-This fork starts a native Nintendo 3DS port of FireRed Evolved using the
-Emerald 3DS platform backend. The previous native `.gba` voxel experiment is
-retired. This project targets3DS homebrew, with dual-screen and voxel rendering
-planned through the existing backend.
-
-Implemented so far:
-
-- Native 3DS build tools and a diagnostic 3DSX target.
-- Input and video-memory bridge using the existing3DS decoder interfaces.
-- BIOS memory copies and immediate/deferred/repeating DMA transfers.
-- FireRed 640 and imported-Emerald 512 tileset-bank handling.
-- Bounds-checked32-bit FireRed metatile attributes and map-block decoding.
-- A plain-C provider interface for linking real FireRed native engine units.
-
-The FireRed integration has compiled and exercised the game's actual RNG/task
-core and checked its map, sprite and save layouts. Full game startup, assets,
-scripts, audio, save storage, dual-screen menus and Kanto voxel scenes remain.
-The `port-check` program clearly identifies itself as a diagnostic; it does not
-load a game or write saves. Original game content is not included here.
+The private integration runs the actual FireRed engine as ARM11 code. It has
+switchable3D/classic presentation, Kanto building/terrain depth, camera controls,
+SD saves, stereo audio and lower-screen menu/battle controls. Full campaign and
+complete native touch-screen replacement remain in progress. The standalone
+port-check target below remains a diagnostic without game or save loading.
 
 ## Development
 

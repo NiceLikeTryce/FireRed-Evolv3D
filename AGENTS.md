@@ -1,4 +1,4 @@
-# FireRed Evolved 3DS source fork
+# FireRed-Evolv3D source fork
 
 This is the PRIVATE platform fork. Preserve upstream licences and source history.
 The active FireRed adapter is firered_port/. The original3ds_port/ remains the
@@ -25,10 +25,18 @@ Commit/push authorized completed platform work as NiceLikeTryce. No upstream
 pushes, no auto PRs, no game imports into this platform Git history.
 
 # Owner privacy requirement (October18,2026)
-NiceLikeTryce/firered-evolved-3ds (repository id1424368097) is PRIVATE at the
+NiceLikeTryce/FireRed-Evolv3D (repository id1424368097) is PRIVATE at the
 owner's explicit request. Never make it public or publish its development
 artifacts to public Pages/releases. Verify exact destination and private
 visibility before pushing. Preserve the source-only platform/game separation
 and licences. The separate public GBA BPS patcher is unaffected. Game CI reads
 this private platform through a dedicated read-only deploy key; never print or
 commit its private key. Current uncommitted port work remains preserved.
+
+
+# Latest owner project name
+The native3DS project/repository is FireRed-Evolv3D. Keep repository id1424368097
+PRIVATE and both main branches unchanged. Current platform work is isolated on
+feature/twin-embers-voxel; actual Evolved/Twin/world integration is in the private
+game branch feature/3ds-twin-embers-voxel. Preserve historical commits/tags and
+existing saves. Local folder and SD paths may remain migration-compatible aliases.

@@ -1,3 +1,5 @@
+# FireRed-Evolv3D platform adapter
+
 # FireRed native 3DS adapter
 
 This is the first integration layer, not a playable FireRed build.
@@ -25,3 +27,7 @@ Native gameplay services are now available on feature/native-gameplay: fixed-wid
 runtime/input/video/audio, exact resident payload relocation and256-colour text.
 The private game integration owns all game code/assets and whole-game tests.
 No executable game or generated game pack is distributed from this source fork.
+
+Current source-only platform branch: feature/twin-embers-voxel. Existing SD/save
+paths remain compatible with earlier private previews. Project/repository name:
+FireRed-Evolv3D. Actual Evolved integration and game assets remain private.

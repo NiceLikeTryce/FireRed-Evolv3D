@@ -1,4 +1,4 @@
-# FireRed Evolved 3DS development
+# FireRed-Evolv3D development
 
 - Native Nintendo 3DS platform port in progress.
 - Private 3DS development repository.
@@ -9,7 +9,7 @@
 - Bounds-checked32-bit metatile attributes.
 - Native FireRed engine-core provider interface.
 - Synthetic host tests and diagnostic 3DSX build.
-- No playable FireRed release yet.
+- Full campaign qualification remains in progress.
 
 - Native frame presentation and stereo PCM transport.
 - DSP-free stereo fallback.

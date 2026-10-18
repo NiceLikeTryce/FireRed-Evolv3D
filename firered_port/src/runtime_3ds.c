@@ -34,7 +34,7 @@ bool Fr3ds_RuntimeInit(void)
     mkdir("sdmc:/3ds", 0777);
     mkdir("sdmc:/3ds/FireRedEvolved", 0777);
     sLog = fopen("sdmc:/3ds/FireRedEvolved/native.log", "w");
-    printf("Pokemon FireRed Evolved\nNative 3DS development build\n\nD-pad / Circle Pad: Move\nA/B: Confirm / Cancel\nSTART: Pause menu\nY: Registered item\n\nHOME: Exit\n");
+    printf("FireRed-Evolv3D\nPrivate native development build\n\nD-pad / Circle Pad: Move\nA/B: Confirm / Cancel\nSTART: Pause menu\nY: Registered item\n\nHOME: Exit\n");
     sAudio = R_SUCCEEDED(ndspInit());
     if (sAudio) {
         sSamples = linearAlloc(6 * 1024 * 2 * sizeof(int16_t));

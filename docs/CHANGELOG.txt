@@ -1,3 +1,23 @@
+FireRed-Evolv3D - project identity
+
+LATEST CHANGES
+- Rename the private3DS project.
+
+DETAILED CHANGES AND VALIDATION
+Rename the private repository to NiceLikeTryce/FireRed-Evolv3D, preserving its
+id1424368097, branches, commits, tags and read-only deploy-key access. Update
+current project docs, runtime/diagnostic titles, diagnostic filenames and the
+exact private-destination guard. Main stays unchanged; use platform branch
+feature/twin-embers-voxel and game branch feature/3ds-twin-embers-voxel.
+Preserve existing SD/save paths and local tools paths as migration aliases.
+FireRed Evolved remains the underlying game and the GBA project name. Source-only
+platform policy, ABI, renderer/game boundaries, RTC, RNG and gameplay stay intact.
+Validate the diagnostic/runtime compile, strict source audit and real native
+integration against this exact platform pin. Keep original game data out of this
+repository. Whole-game validation remains in the private game checkout/archive.
+
+PRESERVED HISTORY
+
 FireRed Evolved3DS - native gameplay support
 
 LATEST CHANGES
