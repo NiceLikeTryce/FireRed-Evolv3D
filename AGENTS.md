@@ -1,6 +1,6 @@
 # FireRed Evolved 3DS source fork
 
-This is the public platform fork. Preserve upstream licences and source history.
+This is the PRIVATE platform fork. Preserve upstream licences and source history.
 The active FireRed adapter is firered_port/. The original3ds_port/ remains the
 Emerald 3DS backend reference; its unmodified builder produces Emerald, not FireRed.
 Never run that bootstrap/reset script on the FireRed game checkout.
@@ -22,4 +22,13 @@ FireRed layouts and512 on imported Emerald layouts. FireRed Evolved uses 32-bit
 metatile attributes in both cases. Do not assume Emerald map/save structs.
 Keep FEATURES.txt and consolidated docs/CHANGELOG.txt current in every commit.
 Commit/push authorized completed platform work as NiceLikeTryce. No upstream
-pushes, no auto PRs, no private game imports into this public Git history.
+pushes, no auto PRs, no game imports into this platform Git history.
+
+# Owner privacy requirement (October18,2026)
+NiceLikeTryce/firered-evolved-3ds (repository id1424368097) is PRIVATE at the
+owner's explicit request. Never make it public or publish its development
+artifacts to public Pages/releases. Verify exact destination and private
+visibility before pushing. Preserve the source-only platform/game separation
+and licences. The separate public GBA BPS patcher is unaffected. Game CI reads
+this private platform through a dedicated read-only deploy key; never print or
+commit its private key. Current uncommitted port work remains preserved.

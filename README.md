@@ -2,6 +2,9 @@
 
 **Work in progress. There is no playable FireRed3DS build yet.**
 
+This 3DS development repository is private. Development builds and integration
+stay private; the existing GBA patcher is a separate project.
+
 This fork starts a native Nintendo 3DS port of FireRed Evolved using the
 Emerald 3DS platform backend. The previous native `.gba` voxel experiment is
 retired. This project targets3DS homebrew, with dual-screen and voxel rendering

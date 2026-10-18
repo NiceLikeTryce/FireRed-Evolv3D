@@ -1,6 +1,7 @@
 # FireRed Evolved 3DS development
 
 - Native Nintendo 3DS platform port in progress.
+- Private 3DS development repository.
 - Input and video decoder bridge.
 - Virtual GBA hardware memory for native game code.
 - BIOS copies and immediate/deferred/repeating DMA.

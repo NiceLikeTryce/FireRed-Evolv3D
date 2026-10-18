@@ -1,11 +1,21 @@
 FireRed Evolved 3DS - native-core milestone1
 
 LATEST CHANGES
-- Fork3DS backend.
-- Add FireRed platform bridge.
-- Build native-core diagnostics.
+- Keep3DS development private.
+- Guard repository visibility.
 
 DETAILED HISTORY
+
+Privacy update
+The owner requested a private FireRed3DS project. Set repository1424368097,
+NiceLikeTryce/firered-evolved-3ds, to PRIVATE. Confirm authenticated API private=true
+and visibility=private, anonymous API404, and no Pages site. Preserve every commit,
+remote and uncommitted platform change. Keep platform/game source separation and
+existing source-only artifact guards. Future pushes verify exact repository ID
+and private visibility. The private game's CI uses a dedicated read-only deploy
+key to fetch its pinned platform commit. Original upstream and the public GBA
+patcher remain unchanged. This is privacy/configuration work, not a playable-build
+claim or a stable game update.
 
 Begin a separate native Nintendo 3DS port using the preserved Emerald 3DS platform
 source. Pin upstream b198c08defb94081ae995796cf75ab8cdb51f2d0 and the official
