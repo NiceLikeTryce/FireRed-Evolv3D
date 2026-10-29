@@ -6,10 +6,10 @@ p=argparse.ArgumentParser();p.add_argument('--refs',nargs='+');p.add_argument('-
 refs=a.refs or []
 if a.pre_push:
  url=a.pre_push[1].lower().rstrip('/').removesuffix('.git')
- if url not in ['https://github.com/niceliketryce/firered-evolv3d','git@github.com:niceliketryce/firered-evolv3d']:
+ if url not in ['https://github.com/niceliketryce/firered-evolved-3ds','git@github.com:niceliketryce/firered-evolved-3ds']:
   raise SystemExit('Push blocked: this checkout publishes only to the owner\'s3DS fork.')
  try:
-  destination=json.loads(subprocess.check_output(['gh','api','repos/NiceLikeTryce/FireRed-Evolv3D'],text=True))
+  destination=json.loads(subprocess.check_output(['gh','api','repos/NiceLikeTryce/FireRed-Evolved-3DS'],text=True))
  except (OSError,subprocess.CalledProcessError,ValueError) as error:
   raise SystemExit('Push blocked: cannot verify private3DS destination.') from error
  if destination.get('id')!=1424368097 or destination.get('private') is not True or destination.get('visibility')!='private':
@@ -26,4 +26,4 @@ for line in text.splitlines():
  path=parts[1]
  if re.search(r'\.(?:gba|agb|nds|3ds|cia|sav|srm|fla|3dsx|smdh|pak|recipe|elf|o|bps|ips|ups)$',path,re.I):blocked.append(path)
 if blocked:raise SystemExit('Public push blocked by payload paths:\n'+'\n'.join(sorted(set(blocked))))
-print('PASS private FireRed-Evolv3D source-only whole-history payload guard')
+print('PASS private FireRed-Evolved-3DS source-only whole-history payload guard')

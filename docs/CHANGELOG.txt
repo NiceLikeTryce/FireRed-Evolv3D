@@ -3,7 +3,7 @@ FireRed Evolved 3DS - Project identity
 LATEST CHANGES
 - Rename the private project to FireRed Evolved 3DS.
 
-The repository is NiceLikeTryce/FireRed-Evolved-3DS, immutable id1424368097, PRIVATE. Existing local/SD paths and historical programs remain compatible. No platform code or game bytes change in this documentation update. Native integration updates the title and bottom-screen label in its next build.
+The repository is NiceLikeTryce/FireRed-Evolved-3DS, immutable id1424368097, PRIVATE. Existing local/SD paths and historical programs remain compatible. The destination guard now accepts only the renamed owner repository and still verifies immutable repository id/private visibility plus source-only history. No gameplay bytes change in this update. Native integration updates the title and bottom-screen label in its next build.
 
 PREVIOUS NOTES
 
