@@ -7298,6 +7298,9 @@ typedef struct StaticMesh
 
 static StaticMesh sStaticMeshes[VOXEL_STATIC_MESHES];
 static bool sStaticFailLogged;
+/* Large voxel catalogues can leave the ordinary heap fragmented. */
+static void *sStaticLinearScratch;
+static bool sStaticLinearScratchLogged;
 
 static void StaticMeshFree(StaticMesh *mesh)
 {
@@ -7372,9 +7375,17 @@ static void StaticBuildEnd(bool bad)
 {
     if (bad && sStaticBuild.pageModel < VOXEL_STATIC_BAD_BITS)
         sStaticBad[sStaticBuild.pageModel >> 5] |= 1u << (sStaticBuild.pageModel & 31u);
-    free(sStaticBuild.packed);
-    free(sStaticBuild.index);
-    free(sStaticBuild.table);
+    if (sStaticLinearScratch != NULL)
+    {
+        linearFree(sStaticLinearScratch);
+        sStaticLinearScratch = NULL;
+    }
+    else
+    {
+        free(sStaticBuild.packed);
+        free(sStaticBuild.index);
+        free(sStaticBuild.table);
+    }
     memset(&sStaticBuild, 0, sizeof(sStaticBuild));
 }
 
@@ -7411,6 +7422,33 @@ static bool StaticBuildStart(unsigned pageModel, bool lit)
     sStaticBuild.packed = malloc(count * sizeof(VoxelGpuVertex));
     sStaticBuild.index = malloc(count * sizeof(uint16_t));
     sStaticBuild.table = malloc(sStaticBuild.buckets * sizeof(int32_t));
+    if (sStaticBuild.packed == NULL || sStaticBuild.index == NULL || sStaticBuild.table == NULL)
+    {
+        size_t packedBytes = count * sizeof(VoxelGpuVertex);
+        size_t indexBytes = (count * sizeof(uint16_t) + 3u) & ~(size_t)3u;
+        size_t tableBytes = sStaticBuild.buckets * sizeof(int32_t);
+
+        free(sStaticBuild.packed);
+        free(sStaticBuild.index);
+        free(sStaticBuild.table);
+        sStaticBuild.packed = NULL;
+        sStaticBuild.index = NULL;
+        sStaticBuild.table = NULL;
+        sStaticLinearScratch = linearAlloc(packedBytes + indexBytes + tableBytes);
+        if (sStaticLinearScratch != NULL)
+        {
+            uint8_t *scratch = sStaticLinearScratch;
+            sStaticBuild.packed = (VoxelGpuVertex *)(void *)scratch;
+            sStaticBuild.index = (uint16_t *)(void *)(scratch + packedBytes);
+            sStaticBuild.table = (int32_t *)(void *)(scratch + packedBytes + indexBytes);
+            if (!sStaticLinearScratchLogged)
+            {
+                sStaticLinearScratchLogged = true;
+                CtrLog_Write(CTR_LOG_VIDEO, "VOXEL static scratch: linear fallback for model %u (%u bytes)",
+                             pageModel, (unsigned)(packedBytes + indexBytes + tableBytes));
+            }
+        }
+    }
     if (sStaticBuild.packed == NULL || sStaticBuild.index == NULL || sStaticBuild.table == NULL)
     {
         /* the heap may have room another time */

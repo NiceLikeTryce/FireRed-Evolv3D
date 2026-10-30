@@ -1,3 +1,15 @@
+FireRed Evolved 3DS - Static mesh scratch allocation
+
+LATEST CHANGES
+- Recover static meshes when ordinary-heap scratch allocation fails.
+
+DETAILS AND VALIDATION
+Keep ordinary scratch allocation as the first path. On partial allocation failure, free those buffers and try one aligned temporary linear block for packed vertices, indices and hash entries. Release that block once on completion or cancellation; preserve original bounds, conversion slices, cache limits, retries, geometry, camera, streaming and VRAM budgets.
+
+The source-extracted host harness covers33normal/partial-failure/linear-failure/alignment/repeated-cleanup/bounds cases. Native integration readback confirmed original static meshes stuck in ordinary scratch retries; the candidate restores them without changing source geometry or game objects. Fourteen actual native views cover an affected roof at0/+30/-30and three dense building contexts. Protected saves and original gameplay remain unchanged. Independent complete native source/profile qualification is recorded in the private integration project before its next delivery. No native Actions runs or cloud qualification claim; no game source, assets, saves or binaries enter this source-only fork.
+
+PREVIOUS NOTES
+
 FireRed Evolved 3DS - Project identity
 
 LATEST CHANGES

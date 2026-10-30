@@ -18,3 +18,4 @@
 
 - Emerald3DS voxel controls with bounded camera steps.
 - Shared persistent renderer settings for the FireRed adapter.
+- Static mesh conversion can recover from ordinary-heap fragmentation using temporary linear scratch within existing limits.
