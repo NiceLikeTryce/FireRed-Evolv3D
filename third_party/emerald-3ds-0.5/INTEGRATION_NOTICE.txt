@@ -8,3 +8,7 @@ Attribution: Emerald 3DS by Zallax and contributors.
 voxel_sprite_slots.c/.h and their current upstream tests are imported verbatim from the0.5revision and retain CC BY-NC-SA4.0; see LICENSE-PORT.md and UPSTREAM_NOTICE.md here. The earlier integration patch retains the original licence recorded in LICENSE-PORT-at-a5121c8.md. Previously published MIT code/history is preserved. No Pokemon game source, art, ROM or saves are added by this intake.
 
 Integration adapts the existing native sprite atlas to prioritize visible wild Pokemon, keep slot assignments stable and show wide field objects at their intended world width. FireRed data remains in the private game adapter. Native integration qualification remains pending.
+
+UI intake: current bottom UI drawing/screen family, game-view interface header and original bottom artwork are imported from bcae4b70dac61419fc933084084469f6cfbe344b under the0.5CC BY-NC-SA4.0terms preserved here. This isolated source candidate is not yet bound to FireRed controllers or native-qualified. Game-view controllers are provided by source game patches and require FireRed adapters; there is no upstream3ds_game_views.c. No Pokemon game data is copied.
+
+The new UI drawing/headers/art remain under versioned ui_v4 paths; the exact legacy bottom source/art/header remain at their original6d459ac paths for existing adapters. firered_port field_v4_sdk.c adapts the current platform lock/thread primitives to a joinable owned UI worker; retain these derivative0.5terms. It contains no game structs or game data.

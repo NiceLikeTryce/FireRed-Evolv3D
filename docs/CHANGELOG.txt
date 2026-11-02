@@ -1,3 +1,16 @@
+FireRed Evolved 3DS - Versioned current field UI capsule
+
+LATEST CHANGES
+- Add current donor header, dock, plates and menu artwork as a versioned source capsule.
+- Add owned joinable UI worker and fixed-width lock/stop bridge.
+
+DETAILS AND VALIDATION
+Current donor main bcae4b7 source/art/headers are retained under src/ui_v4, include/ui_v4 and assets/artwork/ui_v4; preserve versioned attribution/licences. Original legacy UI source/header/art and the old battle-art producer remain exactly at6d459ac. The versioned menu producer uses its own current drawing helper; no unrelated battle asset or world geometry change. No private game source/assets/saves/binaries enter this source-only platform candidate.
+
+The SDK adapter reuses actual libctru locks/threads, keeps one joinable owned handle, requests cooperative stop, and refuses unsafe context reset if its bounded join fails. Duplicate start/create failure/failed-join/restart/serialized-arena behavior passes native ARM11 compilation and host ASan/UBSan tests, including64restarts and60000serialized operations. FireRed-specific source/allocator/reset hooks and native evidence are maintained separately in the private game project. Initial native integration renders current field UI, restores original menu owners and exercises real reset/cache readback, but full frozen-source/profile/private/archive qualification remains pending. Native Actions remain off.
+
+PREVIOUS NOTES
+
 FireRed Evolved 3DS - Upstream sprite atlas intake
 
 LATEST CHANGES

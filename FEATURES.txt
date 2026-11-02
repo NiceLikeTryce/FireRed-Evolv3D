@@ -20,3 +20,4 @@
 - Shared persistent renderer settings for the FireRed adapter.
 - Static mesh conversion can recover from ordinary-heap fragmentation using temporary linear scratch within existing limits.
 - Stable shared voxel sprite-atlas slots, priority allocation and wide-source sampling.
+- Versioned current donor bottom-screen UI source/art with a joinable owned cache-worker bridge.
