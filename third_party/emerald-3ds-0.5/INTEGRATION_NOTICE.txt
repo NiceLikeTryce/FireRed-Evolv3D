@@ -1,0 +1,10 @@
+Emerald3DS 0.5 source intake
+
+Source: https://github.com/ZallaxDev/emerald-3ds
+Current helper/test revision: bcae4b70dac61419fc933084084469f6cfbe344b
+Entity integration patch: a5121c8 (published under its original MIT terms).
+Attribution: Emerald 3DS by Zallax and contributors.
+
+voxel_sprite_slots.c/.h and their current upstream tests are imported verbatim from the0.5revision and retain CC BY-NC-SA4.0; see LICENSE-PORT.md and UPSTREAM_NOTICE.md here. The earlier integration patch retains the original licence recorded in LICENSE-PORT-at-a5121c8.md. Previously published MIT code/history is preserved. No Pokemon game source, art, ROM or saves are added by this intake.
+
+Integration adapts the existing native sprite atlas to prioritize visible wild Pokemon, keep slot assignments stable and show wide field objects at their intended world width. FireRed data remains in the private game adapter. Native integration qualification remains pending.

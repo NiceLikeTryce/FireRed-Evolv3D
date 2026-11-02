@@ -1,3 +1,15 @@
+FireRed Evolved 3DS - Upstream sprite atlas intake
+
+LATEST CHANGES
+- Import stable sprite slots, effect priorities and wide-source sampling.
+
+DETAILS AND VALIDATION
+Import the isolated upstream a5121c8 entity integration and current bcae4b7 pure sprite helpers/tests. Preserve the versioned upstream licences and attribution under third_party/emerald-3ds-0.5. Keep existing terrain, renderer budgets, camera, UI and gameplay adapters unchanged. The visible-wild priority hook remains optional and weak; this source import does not enable a visible-wild gameplay system in FireRed.
+
+Current source passes the upstream sprite-slot host tests, ASan/UBSan and ARM11 helper compilation. The private FireRed adapter compiles the entity caller with pointer conversion errors enabled and uses native palette memory plus FireRed's live integer frame counter. An isolated native prototype boots the original save, renders the original field with no chunk drops/errors and retains its party/save checksums. Generic wide-picture tests are host-qualified; the existing FireRed ship remains owned by its dedicated voxel model. Full independent native source/profile qualification and pin promotion remain pending in the private integration project. Native Actions remain off; no game source, assets, saves or binaries are included here.
+
+PREVIOUS NOTES
+
 FireRed Evolved 3DS - Static mesh scratch allocation
 
 LATEST CHANGES
