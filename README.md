@@ -1,4 +1,4 @@
-# Pokémon FireRed Evolv3d — 3DS port
+# FireRed Evolv3D
 
 **Work in progress. There is no playable FireRed3DS build yet.**
 

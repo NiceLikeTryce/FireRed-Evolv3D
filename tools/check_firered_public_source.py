@@ -6,7 +6,7 @@ p=argparse.ArgumentParser();p.add_argument('--refs',nargs='+');p.add_argument('-
 refs=a.refs or []
 if a.pre_push:
  url=a.pre_push[1].lower().rstrip('/').removesuffix('.git')
- if url not in ['https://github.com/niceliketryce/firered-evolved-3ds','git@github.com:niceliketryce/firered-evolved-3ds']:
+ if url not in ['https://github.com/niceliketryce/firered-evolv3d','git@github.com:niceliketryce/firered-evolv3d']:
   raise SystemExit('Push blocked: this checkout publishes only to the owner\'s3DS fork.')
  try:
   destination=json.loads(subprocess.check_output(['gh','api','repos/NiceLikeTryce/firered-evolved-3ds'],text=True))
