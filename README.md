@@ -1,4 +1,4 @@
-# FireRed Evolved 3DS
+# FireRed Evolv3D
 
 Private native Nintendo3DS project combining FireRed Evolved gameplay, an adapted
 Emerald3DS world renderer and Twin Embers touch-interface work. Current integration

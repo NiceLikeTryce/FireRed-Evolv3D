@@ -1,4 +1,4 @@
-# FireRed Evolved 3DS development
+# FireRed Evolv3D development
 
 - Native Nintendo 3DS platform port in progress.
 - Private 3DS development repository.

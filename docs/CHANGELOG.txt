@@ -1,4 +1,4 @@
-FireRed Evolved 3DS - Versioned current field UI capsule
+FireRed Evolv3D - Versioned current field UI capsule
 
 LATEST CHANGES
 - Add current donor header, dock, plates and menu artwork as a versioned source capsule.
@@ -11,7 +11,7 @@ The SDK adapter reuses actual libctru locks/threads, keeps one joinable owned ha
 
 PREVIOUS NOTES
 
-FireRed Evolved 3DS - Upstream sprite atlas intake
+FireRed Evolv3D - Upstream sprite atlas intake
 
 LATEST CHANGES
 - Import stable sprite slots, effect priorities and wide-source sampling.
@@ -23,7 +23,7 @@ Current source passes the upstream sprite-slot host tests, ASan/UBSan and ARM11 
 
 PREVIOUS NOTES
 
-FireRed Evolved 3DS - Static mesh scratch allocation
+FireRed Evolv3D - Static mesh scratch allocation
 
 LATEST CHANGES
 - Recover static meshes when ordinary-heap scratch allocation fails.
@@ -35,12 +35,12 @@ The source-extracted host harness covers33normal/partial-failure/linear-failure/
 
 PREVIOUS NOTES
 
-FireRed Evolved 3DS - Project identity
+FireRed Evolv3D - Project identity
 
 LATEST CHANGES
-- Rename the private project to FireRed Evolved 3DS.
+- Rename the private project to FireRed Evolv3D.
 
-The repository is NiceLikeTryce/FireRed-Evolved-3DS, immutable id1424368097, PRIVATE. Existing local/SD paths and historical programs remain compatible. The destination guard now accepts only the renamed owner repository and still verifies immutable repository id/private visibility plus source-only history. No gameplay bytes change in this update. Native integration updates the title and bottom-screen label in its next build.
+The repository is NiceLikeTryce/FireRed-Evolv3D, immutable id1424368097, PRIVATE. Existing local/SD paths and historical programs remain compatible. The destination guard now accepts only the renamed owner repository and still verifies immutable repository id/private visibility plus source-only history. No gameplay bytes change in this update. Native integration updates the title and bottom-screen label in its next build.
 
 PREVIOUS NOTES
 
@@ -118,7 +118,7 @@ contracts. CI cross-compiles the actual runtime in addition to its diagnostic.
 The full private integration clean-builds and runs actual FireRed gameplay;
 qualification remains in progress. This platform repository alone is no game.
 
-FireRed Evolved 3DS - native-core milestone1
+FireRed Evolv3D - native-core milestone1
 
 LATEST CHANGES
 - Keep3DS development private.
