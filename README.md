@@ -2,9 +2,11 @@
 
 FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
 
-Current beta: **v0.2.34**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
+Current beta: **v0.2.35**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
 
 ## Major features
+
+- **Postgame Gen3 support** — Trade Gen3 Pokémon and legal held items after Celio’s Ruby/Sapphire quest; restore incense breeding and National Dex entries.
 
 - **All 251 Pokémon** — Catch and collect every Gen 1 and Gen 2 species on one save.
 - **Bigger battle rewards** — Earn bonus items, TMs, and unlocks from Gyms and major battles.
@@ -39,6 +41,10 @@ This repository contains the platform and adapter source. The FireRed game
 integration and player build are developed separately. The diagnostic target
 below exercises the adapter without loading a game or writing saves.
 
+## Move your save
+
+Use the [save transfer tool](https://niceliketryce.github.io/FireRed-Evolved/save.html) to move between GBA and 3DS, or import an original US/English FireRed battery save. Each package includes an untouched backup. Read the [controls and save guide](https://niceliketryce.github.io/FireRed-Evolved/guide.html).
+
 ## How to play
 
 Use the [FireRed Evolv3D web patcher](https://niceliketryce.github.io/FireRed-Evolv3D/) to build the Nintendo 3DS version.
@@ -67,3 +73,11 @@ The existing `3ds_port/`, `builder/` and Emerald documentation are retained from
 for Pokémon Emerald. The platform code is distributed under the scoped
 [upstream licence](LICENSE-PORT.md), [notices](NOTICE.md) and the
 [new adapter licence](firered_port/LICENSE).
+
+## Gameplay gallery
+
+![Native voxel overworld](web-patcher/gallery/native-overworld.png)
+
+![Native voxel battle](web-patcher/gallery/native-battle.png)
+
+![Native touch-screen party](web-patcher/gallery/native-party.png)

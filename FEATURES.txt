@@ -3,6 +3,8 @@
 Major features
 
 - All 251 Pokémon — Collect every Gen 1 and Gen 2 species on one save.
+- Gen3 support — Trade, evolve, breed with incense and view National entries after Celio's Ruby/Sapphire quest.
+- Save transfer — Import vanilla FireRed saves or move saves between both editions with an untouched backup.
 - Bigger battle rewards — Earn bonuses and unlocks from Gyms and major battles.
 - RNG Fix — Uses Ruby and Sapphire’s clock-based startup seeding.
 - Voxel Kanto — Explore 3D scenery and battle scenes.
@@ -16,6 +18,7 @@ Major features
 
 Minor features
 
+- Shared patcher hub — Select one ROM, choose GBA or 3DS, and read the controls guide and gameplay gallery.
 - Browser patcher — Detect clean US/English FireRed v1.0 and v1.1 and assemble a verified 3DSX.
 - A changing world — Real-time day and night and weather.
 - Habitat Guide — Pokémon locations, odds, and unlock conditions.

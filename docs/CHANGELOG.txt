@@ -1,3 +1,8 @@
+FireRed Evolv3D v0.2.35
+- Add the shared edition hub, save transfer/import, controls and gameplay gallery.
+- Synchronize Gen3 postquest support and exact Mew/Celebi reward ranges.
+- Retain verified patch-data reconstruction and the standalone builder fallback.
+
 FireRed Evolv3D v0.2.34
 - Match the latest shared encounter rules and event behavior with FireRed Evolved.
 - Keep Route 14's tree Secret Base in both versions.

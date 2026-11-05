@@ -74,7 +74,7 @@ def copy_source(destination):
         relative = source.relative_to(ROOT / 'web-patcher')
         if source.name in ('.gitignore', '.gitattributes', 'README.md'):
             continue
-        supported = source.suffix in ('.html', '.css', '.mjs', '.js', '.txt', '.md', '.ld') or source.name == 'LICENSE'
+        supported = (source.suffix == '.png' and relative.parts[0] == 'gallery') or source.suffix in ('.html', '.css', '.mjs', '.js', '.txt', '.md', '.ld') or source.name == 'LICENSE'
         if source.is_symlink() or not supported:
             raise ValueError(f'Unexpected source file: {relative}')
         target = destination / relative
