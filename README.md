@@ -35,6 +35,16 @@ This repository contains the platform and adapter source. The FireRed game
 integration and player build are developed separately. The diagnostic target
 below exercises the adapter without loading a game or writing saves.
 
+## How to play
+
+The 3DS web patcher is currently available as a local preview. A public patcher link is pending the distribution review.
+
+1. Bring your own clean US/English FireRed v1.0 or v1.1 ROM.
+2. Open the FireRed Evolv3D web patcher preview and select your ROM. The patcher detects the revision automatically.
+3. Choose **Build and download .3dsx**. Open the downloaded file in Azahar, or copy it to `/3ds/FireRedEvolved/` on your Nintendo 3DS SD card and open it from the Homebrew Launcher.
+
+Both base revisions produce the same 3DS build. Your ROM stays on your device.
+
 ## Development
 
 ```sh
