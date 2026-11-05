@@ -43,3 +43,4 @@ session-*.md
 .public-denylist
 .DS_Store
 /firered_port/build/
+/pages-out/

@@ -1,0 +1,54 @@
+name: Deploy FireRed Evolv3D patcher
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Published owner patch-data release, such as v0.1.1
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: patcher-pages
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    if: github.repository_id == '1424368097' && github.actor == 'NiceLikeTryce' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.release_tag }}
+          persist-credentials: false
+      - uses: actions/configure-pages@v5
+      - name: Prepare the verified release site
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PATCH_RELEASE: ${{ inputs.release_tag }}
+        run: python3 tools/prepare_web_patcher_site.py --release "$PATCH_RELEASE" --output pages-out
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: pages-out
+
+  deploy:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

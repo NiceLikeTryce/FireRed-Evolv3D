@@ -18,3 +18,15 @@ and every file linked by `NOTICE.txt` with the deployed page.
 The public download address is added to the main README after deployment is
 qualified. The current local candidate and distribution records are maintained
 separately from this public source tree.
+
+## Prepare a deployment
+
+After an approved patch-data release is published, run
+`python tools/prepare_web_patcher_site.py --release v0.1.1 --output pages-out`.
+The script verifies the owner repository, release author, exact asset names,
+declared sizes and SHA-256 hashes, then validates the manifest with the browser
+module. It creates the completed output atomically in a fresh directory.
+
+The Pages workflow accepts a published release tag through a manual dispatch
+from the owner's default branch. Its jobs prepare and deploy static files.
+Publication and Pages activation follow the project's distribution approval.

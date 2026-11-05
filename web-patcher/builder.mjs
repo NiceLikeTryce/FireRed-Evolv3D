@@ -9,6 +9,7 @@ const gameRecipeName = 'launcher-game-recipe.gz';
 const gamePatchNames = ['FireRed_Evolv3D_assets_v2_from_BPRE_USA.bps.gz', 'FireRed_Evolv3D_assets_v2_from_BPRE_USA_Rev1.bps.gz'];
 const rowSize = 16;
 const hex = /^[0-9a-f]{64}$/;
+const version = /^v(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)$/;
 const maxOutput = 192 * 1024 * 1024;
 const integer = (n, min, max) => Number.isSafeInteger(n) && n >= min && n <= max;
 
@@ -20,12 +21,14 @@ export async function sha256(bytes) {
 export function validateManifest(m) {
   const isLocalCandidate = typeof m?.version === 'string' && /^beta-rc[0-9]+$/.test(m.version)
     && m.distribution_scope === 'owner-local';
+  const isPublishedPatch = version.test(m?.version) && m?.distribution_scope === 'public-patch-data'
+    && typeof m.runtime_build === 'string' && /^beta-rc[0-9]+$/.test(m.runtime_build);
   const recipeLauncher = [4, 5, 6, 7, 10].includes(m?.schema);
   const components = recipeLauncher ? [...files, launcherRecipeName] : files;
   if ([6,7].includes(m?.schema)) components.push('outdoor-tiles.gz');
   if (m?.schema === 10) components.push(gameRecipeName, ...gamePatchNames);
   const prefixSize = recipeLauncher ? m.launcher_size : m?.parts?.['launcher.gz']?.decoded_size;
-  if (![3,4,5,6,7,10].includes(m?.schema) || !isLocalCandidate
+  if (![3,4,5,6,7,10].includes(m?.schema) || !(isLocalCandidate || isPublishedPatch)
       || !Array.isArray(m.sources) || m.sources.length !== 2
       || m.sources.map(s => s.revision).join(',') !== 'v1.0,v1.1'
       || !m.sources.every(s => hex.test(s.sha256))
@@ -45,7 +48,7 @@ export function validateManifest(m) {
       || m.parts['romfs-recipe.gz'].decoded_size % rowSize !== 0) {
     throw new Error('Invalid 3DS build information.');
   }
-  if (m.schema === 10 && (!m.game_patch || m.game_patch.version !== 'v0.2.31'
+  if (m.schema === 10 && (!m.game_patch || !version.test(m.game_patch.version)
       || !integer(m.game_patch.target_size, 1, ROM_SIZE) || !hex.test(m.game_patch.target_sha256)
       || m.game_patch.kind !== 'approved-gba-assets-v2' || !hex.test(m.game_patch.source_game_sha256)
       || !integer(m.game_patch.pool_size, 1, 4096) || m.game_patch.pool_size % 32
