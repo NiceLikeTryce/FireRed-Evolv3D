@@ -1,5 +1,7 @@
 FireRed Evolv3D v0.1.0
 
+- Group the integrated game's major and minor features in the project overview.
+
 - First public platform source version.
 - Highlight all 251 Gen 1 and Gen 2 Pokémon, increased battle rewards, and the native 3DS features.
 - Use vMAJOR.MINOR.PATCH for new versions.

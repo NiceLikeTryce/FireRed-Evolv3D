@@ -1,10 +1,17 @@
 # FireRed Evolv3D v0.1.0
 
-Game features
+Major features
 
 - Catch and collect all 251 Gen 1 and Gen 2 Pokémon on one save.
 - Increased rewards from Gyms and major battles.
+- Battle Frontier and walking Pokémon partners.
 - 3D voxel scenery and dual-screen touch controls.
+
+Minor features
+
+- Real-time day and night and weather.
+- Pokédex Habitat Guide.
+- IV and EV viewer, longer Repels, and faster egg hatching.
 
 Public platform source
 
