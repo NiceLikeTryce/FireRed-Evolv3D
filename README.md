@@ -2,6 +2,8 @@
 
 FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
 
+Current beta: **v0.2.34**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
+
 ## Major features
 
 - **All 251 Pokémon** — Catch and collect every Gen 1 and Gen 2 species on one save.
@@ -11,12 +13,14 @@ FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
 - **Dual-screen controls** — Use the bottom screen for maps, menus, and touch controls.
 - **Walking partners** — Bring any of the 251 Pokémon along, including shiny variants.
 - **Battle Frontier** — Challenge seven facilities with link battles and battle recordings.
-- **Secret Bases** — Find entrances, decorate your base, and visit and battle in other bases.
+- **Secret Bases** — Find 28 entrances, decorate your base, and visit and battle in other bases.
 - **Celadon Contests** — Compete in five categories and earn ribbons and paintings.
 - **Pokéblocks** — Blend berries with NPCs or link partners.
 - **Berry gardening** — Plant, water, and harvest berries with the Goldeen Canteen.
 
 ## Minor features
+
+- **Encounter odds** — Listed rare species have 5%; nighttime grass and trees reserve 5% for Gastly and 1% for Haunter, with the rest shared evenly.
 
 - **A changing world** — Real-time day and night and weather change the scenery.
 - **Habitat Guide** — Look up Pokémon locations, encounter odds, levels, and unlock conditions.

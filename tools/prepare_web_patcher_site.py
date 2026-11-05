@@ -32,10 +32,11 @@ def validate_manifest(manifest, allow_local=False):
                  and VERSION.fullmatch(str(manifest.get('version', ''))))
     local = (allow_local and manifest.get('distribution_scope') == 'owner-local'
              and re.fullmatch(r'beta-rc[0-9]+', str(manifest.get('version', ''))))
-    if not (published or local) or manifest.get('schema') != 10:
-        raise ValueError('Expected a qualified public schema-10 patch release.')
+    if not (published or local) or manifest.get('schema') not in (10, 11):
+        raise ValueError('Expected a qualified public patch release.')
     parts = manifest.get('parts')
-    if not isinstance(parts, dict) or set(parts) != PARTS:
+    expected_parts = PARTS | ({'runtime-update.bps.gz'} if manifest['schema'] == 11 else set())
+    if not isinstance(parts, dict) or set(parts) != expected_parts:
         raise ValueError('Unexpected release asset names.')
     for descriptor in parts.values():
         if not isinstance(descriptor, dict):

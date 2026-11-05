@@ -18,6 +18,17 @@ def manifest():
 
 
 class PreparationTests(unittest.TestCase):
+    def test_runtime_delta_asset_allowlist(self):
+        value = manifest()
+        value['schema'] = 11
+        with self.assertRaisesRegex(ValueError, 'asset names'):
+            prepare.validate_manifest(value)
+        value['parts']['runtime-update.bps.gz'] = dict(next(iter(value['parts'].values())))
+        self.assertEqual(prepare.validate_manifest(value), value)
+        value['parts']['../runtime-update.bps.gz'] = value['parts'].pop('runtime-update.bps.gz')
+        with self.assertRaisesRegex(ValueError, 'asset names'):
+            prepare.validate_manifest(value)
+
     def test_private_repository_is_rejected_before_download(self):
         repository = dict(id=1424368097, private=True)
         with patch.object(prepare, 'command', return_value=json.dumps(repository)) as request:

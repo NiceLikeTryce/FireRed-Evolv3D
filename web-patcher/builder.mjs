@@ -19,6 +19,22 @@ export async function sha256(bytes) {
 }
 
 export function validateManifest(m) {
+  if (m?.schema === 11) {
+    if (m.base_build?.schema !== 10 || m.base_build.distribution_scope !== 'public-patch-data') throw Error('Invalid base build information.');
+    const base = validateManifest(m.base_build);
+    const updateName = 'runtime-update.bps.gz';
+    const update = m.parts?.[updateName];
+    if (!version.test(m.version) || m.distribution_scope !== 'public-patch-data'
+        || !Array.isArray(m.sources) || JSON.stringify(m.sources) !== JSON.stringify(base.sources)
+        || !m.parts || Object.keys(m.parts).length !== Object.keys(base.parts).length + 1
+        || Object.keys(base.parts).some(name => JSON.stringify(m.parts[name]) !== JSON.stringify(base.parts[name]))
+        || !integer(update?.size, 1, maxOutput) || !integer(update?.decoded_size, 16, maxOutput)
+        || !hex.test(update?.sha256) || !hex.test(m.runtime_patch_sha256)
+        || !integer(m.output?.size, 44, maxOutput) || !hex.test(m.output.sha256)) {
+      throw Error('Invalid runtime update information.');
+    }
+    return m;
+  }
   const isLocalCandidate = typeof m?.version === 'string' && /^beta-rc[0-9]+$/.test(m.version)
     && m.distribution_scope === 'owner-local';
   const isPublishedPatch = version.test(m?.version) && m?.distribution_scope === 'public-patch-data'
@@ -166,6 +182,33 @@ function sortedTextureWrites(desc,source,index,packLength) {
 }
 
 export async function build3dsx(rom, manifest, loadPart, progress = () => {}) {
+  if (manifest?.schema === 11) {
+    const m = validateManifest(manifest);
+    const base = await build3dsx(rom, m.base_build, loadPart, progress);
+    progress('Applying the current game update...');
+    const descriptor = m.parts['runtime-update.bps.gz'];
+    const compressed = await loadPart('runtime-update.bps.gz');
+    if (compressed.byteLength !== descriptor.size || await sha256(compressed) !== descriptor.sha256) {
+      throw Error('Runtime update input verification failed.');
+    }
+    const bytes = new Uint8Array(descriptor.decoded_size);
+    let at = 0;
+    await inflate(compressed, bytes.length, block => { bytes.set(block, at); at += block.length; });
+    if (await sha256(bytes) !== m.runtime_patch_sha256) throw Error('Runtime patch verification failed.');
+    if (typeof globalThis.BPS !== 'function' || typeof globalThis.BinFile !== 'function') {
+      throw Error('The BPS runtime is unavailable. Reload the patcher.');
+    }
+    const patch = globalThis.BPS.fromFile(new globalThis.BinFile(bytes));
+    if (patch.sourceSize !== base.length || patch.targetSize !== m.output.size) {
+      throw Error('Runtime patch sizes differ.');
+    }
+    const output = patch.apply(new globalThis.BinFile(base), true)._u8array;
+    if (output.length !== m.output.size || await sha256(output) !== m.output.sha256) {
+      throw Error('Output verification failed. No file was downloaded.');
+    }
+    return output;
+  }
+
   const m = validateManifest(manifest);
   const index = await detectROM(rom, m);
   const source = new Uint8Array(rom);

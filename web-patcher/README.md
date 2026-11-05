@@ -7,7 +7,7 @@ detects the revision, verifies every input component and verifies the finished
 
 The site requires a separately generated `release.json` and the matching files
 in `assets/`. Those files are excluded from this source checkout. The current
-qualified delivery candidate uses schema 10. Source paths in its reconstruction
+qualified delivery uses schema 11: the schema-10 base reconstruction plus a size- and hash-verified runtime BPS update. Source paths in its reconstruction
 recipes are bounded, and the complete output is bound to its SHA-256 digest.
 
 Serve the prepared site over HTTP so the browser can create its worker and load
@@ -22,7 +22,7 @@ this public source tree.
 ## Prepare a deployment
 
 After an approved patch-data release is published, run
-`python tools/prepare_web_patcher_site.py --release v0.1.1 --output pages-out`.
+`python tools/prepare_web_patcher_site.py --release v0.2.34 --output pages-out`.
 The script verifies the owner repository, release author, exact asset names,
 declared sizes and SHA-256 hashes, then validates the manifest with the browser
 module. It creates the completed output atomically in a fresh directory.

@@ -38,3 +38,6 @@ Public platform source
 - Bounds-checked32-bit metatile attributes.
 - Native FireRed engine-core provider interface.
 - Synthetic host tests and diagnostic 3DSX build.
+
+- Shared encounter rules and event scripts match FireRed Evolved.
+- Listed rare species have 5%; nighttime grass and trees reserve 5% for Gastly and 1% for Haunter.
