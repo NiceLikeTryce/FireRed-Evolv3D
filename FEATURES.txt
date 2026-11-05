@@ -1,7 +1,14 @@
-# FireRed Evolved 3DS development
+# FireRed Evolv3D v0.1.0
+
+Game features
+
+- Catch and collect all 251 Gen 1 and Gen 2 Pokémon on one save.
+- Increased rewards from Gyms and major battles.
+- 3D voxel scenery and dual-screen touch controls.
+
+Public platform source
 
 - Native Nintendo 3DS platform port in progress.
-- Private 3DS development repository.
 - Input and video decoder bridge.
 - Virtual GBA hardware memory for native game code.
 - BIOS copies and immediate/deferred/repeating DMA.
@@ -9,4 +16,3 @@
 - Bounds-checked32-bit metatile attributes.
 - Native FireRed engine-core provider interface.
 - Synthetic host tests and diagnostic 3DSX build.
-- No playable FireRed release yet.

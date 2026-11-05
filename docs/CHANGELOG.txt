@@ -1,4 +1,10 @@
-FireRed Evolved 3DS - native-core milestone1
+FireRed Evolv3D v0.1.0
+
+- First public platform source version.
+- Highlight all 251 Gen 1 and Gen 2 Pokémon, increased battle rewards, and the native 3DS features.
+- Use vMAJOR.MINOR.PATCH for new versions.
+
+Earlier FireRed Evolved 3DS history
 
 LATEST CHANGES
 - Keep3DS development private.

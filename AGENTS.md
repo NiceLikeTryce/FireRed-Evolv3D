@@ -1,5 +1,12 @@
 # FireRed Evolved 3DS source fork
 
+The owner approved public visibility for NiceLikeTryce/FireRed-Evolv3D
+(repository ID 1424368097). This overrides the older private-visibility
+instructions below for this platform repository. Keep the separate game
+repository, ROMs, saves, and game-build artifacts private. Preserve upstream
+licence scopes and existing refs. Start public platform versions at v0.1.0
+and use vMAJOR.MINOR.PATCH for later releases.
+
 This is the PRIVATE platform fork. Preserve upstream licences and source history.
 The active FireRed adapter is firered_port/. The original3ds_port/ remains the
 Emerald 3DS backend reference; its unmodified builder produces Emerald, not FireRed.
