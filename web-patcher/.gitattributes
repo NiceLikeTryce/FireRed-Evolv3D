@@ -1,0 +1,4 @@
+# Preserve upstream runtime formatting and full license text copies.
+vendor/** linguist-vendored -whitespace
+licenses/** -whitespace
+GBAGFX-LICENSE.txt -whitespace

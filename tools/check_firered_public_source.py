@@ -9,11 +9,11 @@ if a.pre_push:
  if url not in ['https://github.com/niceliketryce/firered-evolv3d','git@github.com:niceliketryce/firered-evolv3d']:
   raise SystemExit('Push blocked: this checkout publishes only to the owner\'s3DS fork.')
  try:
-  destination=json.loads(subprocess.check_output(['gh','api','repos/NiceLikeTryce/firered-evolved-3ds'],text=True))
+  destination=json.loads(subprocess.check_output(['gh','api','repos/NiceLikeTryce/FireRed-Evolv3D'],text=True))
  except (OSError,subprocess.CalledProcessError,ValueError) as error:
-  raise SystemExit('Push blocked: cannot verify private3DS destination.') from error
- if destination.get('id')!=1424368097 or destination.get('private') is not True or destination.get('visibility')!='private':
-  raise SystemExit('Push blocked: the3DS project must remain PRIVATE.')
+  raise SystemExit('Push blocked: cannot verify the3DS source destination.') from error
+ if destination.get('id')!=1424368097 or destination.get('private') is not False or destination.get('visibility')!='public':
+  raise SystemExit('Push blocked: expected the owner-approved PUBLIC3DS source repository.')
  for line in sys.stdin:
   local,sha,remote,old=line.split()
   if sha!='0'*40:refs.append(sha)

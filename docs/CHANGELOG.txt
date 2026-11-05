@@ -1,3 +1,15 @@
+Unreleased browser patcher
+
+- Add FireRed revision detection and a browser worker that builds verified 3DSX files.
+- Derive shared asset banks through compact BPS patches from the approved GBA game output.
+- Include component notices and the exact MPL linker source.
+
+The source update contains generic browser code, licenses and linker configuration.
+Generated manifests and patch payloads are maintained separately. The local candidate
+reproduces the existing qualified beta RC4 executable from both supported inputs.
+The actual browser download path and damaged-ROM rejection were verified. Public
+data delivery remains subject to the recorded project distribution boundary.
+
 FireRed Evolv3D v0.1.0
 
 - List Ruby and Sapphire-style RNG seeding as a major feature.

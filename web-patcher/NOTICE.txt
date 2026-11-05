@@ -1,0 +1,78 @@
+FireRed Evolv3D credits and licenses
+
+FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
+Each software component retains its own license and copyright notices.
+
+Original project contributions
+
+NiceLikeTryce, FireRed Evolv3D adapter and browser reconstruction code.
+The project MIT license is in licenses/FireRed-Evolv3D-MIT.txt.
+
+Upstream port and voxel renderer
+
+ZallaxDev and the Emerald 3DS contributors provided the original 3DS port,
+voxel tools, and renderer. The recorded geometry sources are pinned to
+b198c08defb94081ae995796cf75ab8cdb51f2d0.
+https://github.com/ZallaxDev/emerald-3ds
+Full scope and MIT text are in licenses/Emerald3DS-LICENSE-PORT.md.
+
+The renderer incorporates logic from gradenGnostic/pokeemerald-multiplatform,
+commit db1cab3d2dc9f0e0a9f4a3d67983e5acf30a9a46.
+https://github.com/gradenGnostic/pokeemerald-multiplatform
+The original MIT notice is in licenses/Voxel-renderer-MIT-NOTICE.md.
+
+Additional FireRed voxel reference
+https://github.com/NachoGonzalez2001/Pokemon-FireRed-3DS
+
+Browser patching and graphics tooling
+
+Marc Robledo, Rom Patcher JS, BinFile, and HashCalculator, MIT.
+Copyright notices and the full license are in vendor/LICENSE and the
+original runtime modules in vendor/.
+https://github.com/marcrobledo/RomPatcher.js
+
+YamaArashi, gbagfx, copyright 2015, MIT. The deterministic LZ77 match order
+is adapted in outdoor-graphics.mjs. See GBAGFX-LICENSE.txt.
+
+Libraries linked into the reconstructed 3DS executable
+
+devkitPro libctru 2.7.0, citro2d 1.7.0, and citro3d 1.7.1 use the zlib
+license. Their complete retained notices are in licenses/.
+https://github.com/devkitPro/libctru
+https://github.com/devkitPro/citro2d
+https://github.com/devkitPro/citro3d
+
+The build uses GCC 16.1.0 runtime support and newlib 4.6.0.
+See licenses/GPL-3.0-only.txt, licenses/GCC-exception-3.1.txt, and the
+complete newlib copying notices in licenses/.
+
+Linker source
+
+sources/native.ld is the exact modified devkitARM 3dsx.ld source used to
+link this build. Its modifications group game data and BSS before the
+other native storage. This file is available under MPL 2.0, with the full
+license in licenses/MPL-2.0.txt.
+https://www.mozilla.org/en-US/MPL/2.0/
+
+Game data and artwork
+
+The small asset BPS files derive their sprite and palette banks from the
+verified FireRed Evolved v0.2.31 output. Outdoor tile patterns use recorded
+palette-index conversions from the same source game.
+
+Pokémon FireRed, Pokémon Emerald, and their characters, artwork, audio,
+text, and original game content retain the rights of Nintendo, Game Freak,
+Creatures, and their respective creators.
+
+Game source references include pret/pokefirered and pret/pokeemerald.
+https://github.com/pret/pokefirered
+https://github.com/pret/pokeemerald
+
+Retained follower artwork references include Mickosis/Modern_Emerald and
+the comparative follower revisions from Radical Red 4.1. Modern Emerald
+credits Exclsior, Voloved, Ghoulslash, ExpoSeed, Lunos, Mkol103, FieryMewtwo,
+TheXaman, LOuroboros, Jaizu, Buffel Saft, AkimotoBubble, and Scyrous.
+https://github.com/Mickosis/Modern_Emerald
+
+These software notices describe the covered software components. Game
+content and community artwork retain their original authorship and rights.
