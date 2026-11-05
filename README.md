@@ -6,6 +6,7 @@ FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
 
 - **All 251 Pokémon** — Catch and collect every Gen 1 and Gen 2 species on one save.
 - **Bigger battle rewards** — Earn bonus items, TMs, and unlocks from Gyms and major battles.
+- **RNG Fix** — Uses Ruby and Sapphire’s clock-based startup seeding.
 - **Voxel Kanto** — Explore 3D routes, towns, interiors, and battle scenes.
 - **Dual-screen controls** — Use the bottom screen for maps, menus, and touch controls.
 - **Walking partners** — Bring any of the 251 Pokémon along, including shiny variants.

@@ -4,6 +4,7 @@ Major features
 
 - All 251 Pokémon — Collect every Gen 1 and Gen 2 species on one save.
 - Bigger battle rewards — Earn bonuses and unlocks from Gyms and major battles.
+- RNG Fix — Uses Ruby and Sapphire’s clock-based startup seeding.
 - Voxel Kanto — Explore 3D scenery and battle scenes.
 - Dual-screen controls — Use touch maps and menus on the bottom screen.
 - Walking partners — Bring any of the 251 Pokémon along.
