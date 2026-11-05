@@ -1,4 +1,4 @@
-Unreleased browser patcher
+FireRed Evolv3D v0.1.1
 
 - Add FireRed revision detection and a browser worker that builds verified 3DSX files.
 - Derive shared asset banks through compact BPS patches from the approved GBA game output.
@@ -8,8 +8,9 @@ Unreleased browser patcher
 The source update contains generic browser code, licenses and linker configuration.
 Generated manifests and patch payloads are maintained separately. The local candidate
 reproduces the existing qualified beta RC4 executable from both supported inputs.
-The actual browser download path and damaged-ROM rejection were verified. Public
-data delivery remains subject to the recorded project distribution boundary.
+The actual browser download path and damaged-ROM rejection were verified.
+Public patch-data delivery and Pages deployment were approved by the owner
+on November 5, 2026. This release reconstructs the qualified beta RC4 runtime.
 Release preparation rejects unknown asset paths, mismatched sizes and hashes,
 and local-only manifests during public deployment. Failed preparation leaves
 the requested output directory untouched. The Pages workflow requires manual

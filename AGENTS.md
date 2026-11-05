@@ -1,4 +1,13 @@
-# FireRed Evolved 3DS source fork
+# FireRed Evolv3D source and browser patcher
+
+November 5, 2026 owner approval: publish the verified FireRed Evolv3D native
+patch-data package and deploy its public browser patcher through a Pages-only
+workflow. This explicitly permits the qualified generated patch payloads and
+release manifest in public releases and Pages artifacts. Keep generated data
+out of source Git. Keep the separate game repository, retail ROMs, saves,
+private game source, ELF files and complete prebuilt game images private.
+Preserve existing refs. Native validation remains manually disabled. Pages
+deployment may be enabled for the owner's approved public patcher.
 
 The owner approved public visibility for NiceLikeTryce/FireRed-Evolv3D
 (repository ID 1424368097). This overrides the older private-visibility

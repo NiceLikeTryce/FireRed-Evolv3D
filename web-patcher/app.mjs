@@ -93,7 +93,8 @@ $('apply').addEventListener('click', () => {
       const url = URL.createObjectURL(new Blob([data.output], {type:'application/octet-stream'}));
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'FireRed-Evolv3D-voxel.3dsx';
+      link.download = manifest.distribution_scope === 'public-patch-data'
+        ? `FireRed_Evolv3D_${manifest.version}.3dsx` : 'FireRed-Evolv3D-voxel.3dsx';
       document.body.append(link);
       link.click();
       link.remove();

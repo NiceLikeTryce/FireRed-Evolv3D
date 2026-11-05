@@ -15,9 +15,9 @@ the reconstruction modules. The BPS runtime is loaded by the classic worker
 before it imports the reconstruction module. Keep the original runtime notices
 and every file linked by `NOTICE.txt` with the deployed page.
 
-The public download address is added to the main README after deployment is
-qualified. The current local candidate and distribution records are maintained
-separately from this public source tree.
+The public patcher is at https://niceliketryce.github.io/FireRed-Evolv3D/.
+Local build candidates and distribution records are maintained separately from
+this public source tree.
 
 ## Prepare a deployment
 
