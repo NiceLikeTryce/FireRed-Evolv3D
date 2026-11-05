@@ -1,5 +1,6 @@
 FireRed Evolv3D v0.1.0
 
+- Expand the project overview with named features and brief descriptions.
 - Group the integrated game's major and minor features in the project overview.
 
 - First public platform source version.

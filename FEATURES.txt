@@ -2,16 +2,29 @@
 
 Major features
 
-- Catch and collect all 251 Gen 1 and Gen 2 Pokémon on one save.
-- Increased rewards from Gyms and major battles.
-- Battle Frontier and walking Pokémon partners.
-- 3D voxel scenery and dual-screen touch controls.
+- All 251 Pokémon — Collect every Gen 1 and Gen 2 species on one save.
+- Bigger battle rewards — Earn bonuses and unlocks from Gyms and major battles.
+- Voxel Kanto — Explore 3D scenery and battle scenes.
+- Dual-screen controls — Use touch maps and menus on the bottom screen.
+- Walking partners — Bring any of the 251 Pokémon along.
+- Battle Frontier — Challenge seven facilities and record battles.
+- Secret Bases — Decorate, visit, and battle.
+- Celadon Contests — Compete in five categories.
+- Pokéblocks — Blend berries with NPCs or link partners.
+- Berry gardening — Plant, water, and harvest berries.
 
 Minor features
 
-- Real-time day and night and weather.
-- Pokédex Habitat Guide.
-- IV and EV viewer, longer Repels, and faster egg hatching.
+- A changing world — Real-time day and night and weather.
+- Habitat Guide — Pokémon locations, odds, and unlock conditions.
+- Training tools — IV and EV viewer, longer Repels, and faster egg hatching.
+- Easier evolutions — Trade-backs, evolution stones, and missed-move learning.
+- Tree Shaker — Find wild Pokémon in trees.
+- Safari Zone — Catch all three Johto starters.
+- Acro Bike — Hop ledges in either direction.
+- Mirage Island — Take the ferry after the Champion.
+- Camera controls — Reset the camera and select a display preset.
+- Optional challenges — Seeded randomizer and Nuzlocke tracking.
 
 Public platform source
 
