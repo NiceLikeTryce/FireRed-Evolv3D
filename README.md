@@ -2,7 +2,7 @@
 
 FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
 
-Current beta: **v0.2.36**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
+Current beta: **v0.2.37**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
 
 ## Major features
 

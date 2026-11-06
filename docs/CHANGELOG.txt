@@ -1,3 +1,7 @@
+FireRed Evolv3D v0.2.37
+- Close the Pallet player/rival house roof ridge below the transparent artwork margin.
+- Preserve roof/facade artwork, house placements, collisions, saves and v0.2.36 shared gameplay.
+
 FireRed Evolv3D v0.2.36
 - Add verified offline packages for both editions and previewable rotating save backups.
 - Support all386 walking partners, exact reward progress, optional automatic Nuzlocke records and visible wild encounters.
