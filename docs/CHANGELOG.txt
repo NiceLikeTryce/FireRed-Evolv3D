@@ -1,3 +1,28 @@
+FireRed Evolv3D v0.2.40
+CURRENT VERSION: v0.2.40
+
+LATEST CHANGES
+- Keep Pallet house roof corners inside the original black outline.
+- Use the vanilla FireRed normal menu font in custom tool panels.
+- Draw battle names, levels, HP/status and EXP with native-resolution healthboxes.
+
+CURRENT BUILD SCOPE
+Native presentation only; shared gameplay/GBA build staysv0.2.36.
+Pallet model336 retains every original opaque texel and has zero projected
+outline extras. Its scoped bank splice preserves other geometry/textures and
+placements, with only necessary vertex/page offsets adjusted.
+The checked Emerald3DS HD painter is adapted through passive FireRed display
+hooks: original battle-interface bodies recover exactly after removing these
+hooks. Actual animated HP/EXP values, statuses, caught icons and Safari counts
+drive the painter. Original dialogue stays240x160at1:1(80,80).
+Local Old-model native cases cover singles, real turns, doubles, poison,
+Safari and original-resource fallback/restoration. Both frozen full programs
+match fresh changed-unit ordinary/diagnostic compilation;19renderer structs
+and8offsets and32byte HUD ABI pass. No physical-device/cloud-game claim.
+Native validation Actions remain disabled. Original saves/history/unowned work
+and the cancelled prior task8 are preserved.
+
+PRESERVED PREVIOUS HISTORY
 FireRed Evolv3D v0.2.39
 CURRENT VERSION: v0.2.39
 

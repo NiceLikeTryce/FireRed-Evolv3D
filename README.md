@@ -2,7 +2,7 @@
 
 FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
 
-Current beta: **v0.2.39**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
+Current beta: **v0.2.40**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
 
 ## Major features
 
@@ -27,6 +27,8 @@ Current beta: **v0.2.39**, synchronized with FireRed Evolved’s shared encounte
 - **Berry gardening** — Plant, water, and harvest berries with the Goldeen Canteen.
 
 ## Minor features
+
+- **Crisp battle HUD** — Native-resolution names, levels, HP/status and animated bars.
 
 - **Visible wild Pokémon** — Optional overworld encounters from the normal area tables.
 - **Reward progress** — See Mew/Celebi catch counts, missing species and habitat links.

@@ -63,3 +63,7 @@ Public platform source
 - Photo mode — Frame voxel scenes with a free camera and export clean PNGs.
 
 - Quest journal — Read story, Celio, Mew/Celebi and Frontier progress.
+
+- Outline-fitted roofs — Pallet house corners stay inside the original drawing.
+- Classic menu type — Custom tool panels use the vanilla FireRed normal font.
+- Native battle HUD — Crisp names, levels, HP/status and animated bars at screen resolution.
