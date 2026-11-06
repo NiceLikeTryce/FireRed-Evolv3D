@@ -1,3 +1,21 @@
+FireRed Evolv3D v0.2.39
+CURRENT VERSION: v0.2.39
+
+LATEST CHANGES
+- Fit complete first-run, save and recovery notices on the bottom screen.
+- Retain the seven installation, update, photo and journal features from v0.2.38.
+
+CURRENT BUILD SCOPE
+Only the native utility notice wrap width changes, from43 to36 columns.
+Fresh compilation of the sole changed SDK unit produces matching complete
+ordinary/diagnostic profiles. Actual Old-model native text is fully visible;
+saves remain unchanged. Both retail bases and both source-version update
+patches decode exactly. Thev0.2.38-to-v0.2.39 update is72 bytes.
+Retain allv0.2.38 feature/core/save/ABI/world/campaign qualification and original
+history. Shared gameplay and the GBA game build remainv0.2.36. No physical-device
+or new cloud-game-build claim. Native validation Actions remain disabled.
+
+PRESERVED PREVIOUS HISTORY
 FireRed Evolv3D v0.2.38
 
 LATEST CHANGES
