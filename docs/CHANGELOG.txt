@@ -1,3 +1,7 @@
+Website battle gallery refresh
+- Show the current outdoor voxel arena and native-resolution battle HUD in both repository and patcher galleries.
+- Game payloads and immutable v0.2.40 release tags stay unchanged.
+
 Website gallery refresh
 - Show the corrected Pallet house roof in both repository and patcher galleries.
 - Retainv0.2.40 game payloads and immutable release tags; Pages uses the reviewed triggering site commit.

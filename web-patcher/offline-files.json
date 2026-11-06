@@ -37,6 +37,11 @@
       "textLF": false
     },
     {
+      "path": "gallery/voxel-arena-hud.png",
+      "sha256": "89a3b82310ee65257da37eac55139c0746ebe0ff883fd07ebe2e375c0b8ce1bd",
+      "textLF": false
+    },
+    {
       "path": "GBAGFX-LICENSE.txt",
       "sha256": "49f7647d391dc12a0f0f552a295111337337a022fd057b624364521871375c95",
       "textLF": true
