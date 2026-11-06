@@ -1,3 +1,9 @@
+FireRed Evolv3D v0.2.36
+- Add verified offline packages for both editions and previewable rotating save backups.
+- Support all386 walking partners, exact reward progress, optional automatic Nuzlocke records and visible wild encounters.
+- Add Old3DS Performance and New3DS graphics presets, latest tabbed Options and red startup cover.
+- Fix touch release, intro width, recap colours and door/stair presentation; repair Four Island rival visibility.
+
 FireRed Evolv3D v0.2.35
 - Add the shared edition hub, save transfer/import, controls and gameplay gallery.
 - Synchronize Gen3 postquest support and exact Mew/Celebi reward ranges.

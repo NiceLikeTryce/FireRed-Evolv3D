@@ -9,7 +9,7 @@ Major features
 - RNG Fix — Uses Ruby and Sapphire’s clock-based startup seeding.
 - Voxel Kanto — Explore 3D scenery and battle scenes.
 - Dual-screen controls — Use touch maps and menus on the bottom screen.
-- Walking partners — Bring any of the 251 Pokémon along.
+- Walking partners — Support all 386 species as walking partners.
 - Battle Frontier — Challenge seven facilities and record battles.
 - Secret Bases — Decorate, visit, and battle.
 - Celadon Contests — Compete in five categories.
@@ -28,8 +28,8 @@ Minor features
 - Safari Zone — Catch all three Johto starters.
 - Acro Bike — Hop ledges in either direction.
 - Mirage Island — Take the ferry after the Champion.
-- Camera controls — Reset the camera and select a display preset.
-- Optional challenges — Seeded randomizer and Nuzlocke tracking.
+- Camera controls — Choose Performance, Balanced or Quality; Performance supports Old 3DS.
+- Optional challenges — Optional seeded randomizer and automatic Nuzlocke tracking; disabled by default.
 
 Public platform source
 
@@ -44,3 +44,10 @@ Public platform source
 
 - Shared encounter rules and event scripts match FireRed Evolved.
 - Listed rare species have 5%; nighttime grass and trees reserve 5% for Gastly and 1% for Haunter.
+
+- Visible wild Pokemon — Optional encounters drawn from the normal area tables.
+- Reward progress — Exact Mew/Celebi counts, missing species and habitat links.
+- Save backups — Five verified snapshots per trainer with previews.
+- Offline patching — Keep a verified package after initial setup.
+- Modern menus — Current tabbed Options and reliable touch controls.
+- Consistent presentation — Red Poke Ball startup, full intro and stable voxel recap/warp transitions.

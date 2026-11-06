@@ -2,7 +2,7 @@
 
 FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
 
-Current beta: **v0.2.35**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
+Current beta: **v0.2.36**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
 
 ## Major features
 
@@ -13,7 +13,7 @@ Current beta: **v0.2.35**, synchronized with FireRed Evolved’s shared encounte
 - **RNG Fix** — Uses Ruby and Sapphire’s clock-based startup seeding.
 - **Voxel Kanto** — Explore 3D routes, towns, interiors, and battle scenes.
 - **Dual-screen controls** — Use the bottom screen for maps, menus, and touch controls.
-- **Walking partners** — Bring any of the 251 Pokémon along, including shiny variants.
+- **Walking partners** — Support walking partners for all 386 species, including shiny variants.
 - **Battle Frontier** — Challenge seven facilities with link battles and battle recordings.
 - **Secret Bases** — Find 28 entrances, decorate your base, and visit and battle in other bases.
 - **Celadon Contests** — Compete in five categories and earn ribbons and paintings.
@@ -21,6 +21,12 @@ Current beta: **v0.2.35**, synchronized with FireRed Evolved’s shared encounte
 - **Berry gardening** — Plant, water, and harvest berries with the Goldeen Canteen.
 
 ## Minor features
+
+- **Visible wild Pokémon** — Optional overworld encounters from the normal area tables.
+- **Reward progress** — See Mew/Celebi catch counts, missing species and habitat links.
+- **Save backups** — Keep rotating verified backups with trainer previews.
+- **Offline patching** — Keep the verified package for use after initial setup.
+- **Modern presentation** — Tabbed Options, a red Poké Ball startup screen and stable voxel transitions.
 
 - **Encounter odds** — Listed rare species have 5%; nighttime grass and trees reserve 5% for Gastly and 1% for Haunter, with the rest shared evenly.
 
@@ -32,8 +38,8 @@ Current beta: **v0.2.35**, synchronized with FireRed Evolved’s shared encounte
 - **Safari Zone** — Catch all three Johto starters.
 - **Acro Bike** — Hop ledges in either direction after the Champion.
 - **Mirage Island** — Unlock a new ferry destination after the Champion.
-- **Camera controls** — Reset the camera and switch between Performance and Quality presets.
-- **Optional challenges** — Enable a seeded randomizer or track a Nuzlocke.
+- **Camera controls** — Reset the camera and choose Performance, Balanced or Quality; Performance supports Old 3DS.
+- **Optional challenges** — Enable a seeded randomizer or automatic Nuzlocke tracking; optional modes default off.
 
 `v0.1.0` is the first public platform source version. Future releases use
 `vMAJOR.MINOR.PATCH`. The gameplay features above describe the integrated game.

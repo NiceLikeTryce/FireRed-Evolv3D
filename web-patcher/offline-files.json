@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "app.mjs",
+      "sha256": "4c99155db81bc0909a5b75eac97a0b1de5c1e3dd50fa70a35ebb2296db2dc0cb",
+      "textLF": true
+    },
+    {
+      "path": "approved-game-source.mjs",
+      "sha256": "bf8d42d7540efcb0d464dcb96ccdba39b0c0fc062e78a889c2c58b9342b1d490",
+      "textLF": true
+    },
+    {
+      "path": "builder.mjs",
+      "sha256": "303660791ec9b445a9490962179d5e74364595e2997b037711a39f08766282e4",
+      "textLF": true
+    },
+    {
+      "path": "gallery/native-battle.png",
+      "sha256": "9552841a188c100a495fbe63b888c30c706438f044aff0d138f20c3991d0512b",
+      "textLF": false
+    },
+    {
+      "path": "gallery/native-overworld.png",
+      "sha256": "471ef83818881eaeeda011bb56bb281eb11d6963e6e1a78f10f6a5f02dc903d6",
+      "textLF": false
+    },
+    {
+      "path": "gallery/native-party.png",
+      "sha256": "74a689ffcb70cce0c161c63f49ded3fdc74a1bf3b118bf89925886bde241b2d7",
+      "textLF": false
+    },
+    {
+      "path": "GBAGFX-LICENSE.txt",
+      "sha256": "49f7647d391dc12a0f0f552a295111337337a022fd057b624364521871375c95",
+      "textLF": true
+    },
+    {
+      "path": "hub-link.mjs",
+      "sha256": "17a26535f7fa0ec89ffaed87221d53e74fd505c36d2cb2fd8fda748afa2aaca2",
+      "textLF": true
+    },
+    {
+      "path": "index.html",
+      "sha256": "ed5f5c93d59ccd2f0e8ae1d63610d931c21903b48b470db698bc526c775d6f17",
+      "textLF": true
+    },
+    {
+      "path": "licenses/citro2d-v1.7.0-LICENSE.txt",
+      "sha256": "852711e22394a8ccc0487b8179774d15e4fed72a994c1a6fb2993b2279984bde",
+      "textLF": true
+    },
+    {
+      "path": "licenses/citro3d-v1.7.1-LICENSE.txt",
+      "sha256": "4d8db8e7270929946a3439aef932e37c7356a83391e56006439087e1d685809d",
+      "textLF": true
+    },
+    {
+      "path": "licenses/Emerald3DS-LICENSE-PORT.md",
+      "sha256": "fddc4c12d79b4147f8de3731d460c24de710bf3ef826144b7aa388af6ccc5d18",
+      "textLF": true
+    },
+    {
+      "path": "licenses/FireRed-Evolv3D-MIT.txt",
+      "sha256": "1ab93f73ecbe541fd596d8dd56087ead2768d6950a465c23037ea1c4e7d3dbfb",
+      "textLF": true
+    },
+    {
+      "path": "licenses/GCC-exception-3.1.txt",
+      "sha256": "59747c7ffac1e9a3d04d6b690ade7684e2757d4b7d10d7379c63438b6c096608",
+      "textLF": true
+    },
+    {
+      "path": "licenses/GPL-3.0-only.txt",
+      "sha256": "203c10ae2f92356d658522ee61db97e5daad634c5dc4190bc0bd23a1511a33b4",
+      "textLF": true
+    },
+    {
+      "path": "licenses/libctru-v2.7.0-README-License.txt",
+      "sha256": "093b82e887bd249d69dd9148aa7d582a599d72b4ad9122e0f3115023b82d3a26",
+      "textLF": true
+    },
+    {
+      "path": "licenses/MPL-2.0.txt",
+      "sha256": "1a389c0a135f37855baa2fb879f86ed111d7facf8b0d5188330b35a22c4428a1",
+      "textLF": true
+    },
+    {
+      "path": "licenses/newlib-4.6.0-devkitPro-57bd8e1-COPYING.NEWLIB.txt",
+      "sha256": "f3afe48e4bc6ed8466a42e9dacb6be1d8f9cbf5aac15cb8e474a5ccde8b40ef6",
+      "textLF": true
+    },
+    {
+      "path": "licenses/Voxel-renderer-MIT-NOTICE.md",
+      "sha256": "22377d367c802b59a045d9b824c033f09b273701b89721985860f6203a095824",
+      "textLF": true
+    },
+    {
+      "path": "NOTICE.txt",
+      "sha256": "351ff054e2aa31769e8120c2f3d26043c77f19284fb53d9d87e55e7db8b8176f",
+      "textLF": true
+    },
+    {
+      "path": "outdoor-graphics.mjs",
+      "sha256": "fc39569a17d452168b3fc34f50f95337f8ff56241c70510929788b6a3b79c53e",
+      "textLF": true
+    },
+    {
+      "path": "rebuild-short-font.mjs",
+      "sha256": "33b071d47a9f59b6fef80eebcb5202a6928aab693d9c8870543f6e41c24c3953",
+      "textLF": true
+    },
+    {
+      "path": "rom-tile-prototype.mjs",
+      "sha256": "58d60f9d6740e25650ffc7f2fe8f507c34d864981e4784850ec494c191e0df3f",
+      "textLF": true
+    },
+    {
+      "path": "service-worker.js",
+      "sha256": "e2b5a060beff1dfb645e65c7a4755a6e1c698f26f9b2eae69b6f117686b18012",
+      "textLF": true
+    },
+    {
+      "path": "sources/native.ld",
+      "sha256": "e3885561244c2fd7bde016e8e9ff170b8d0d0962fc1a3e1700e1652691990329",
+      "textLF": true
+    },
+    {
+      "path": "style.css",
+      "sha256": "56a7fa863bc8d8d05b1191f1d5dd77847ac94e55406a0ff25e7b96637c57ea7d",
+      "textLF": true
+    },
+    {
+      "path": "texture-ops-expanded.mjs",
+      "sha256": "dde2519bf763384bdc88739be48fbcf7f3d9f0e8e065ac19f4ab916102a7d5aa",
+      "textLF": true
+    },
+    {
+      "path": "vendor/BinFile.js",
+      "sha256": "3856e2f30bb8f105796a0371231a9b2aa37266148ac496711f07fd1e80fef688",
+      "textLF": true
+    },
+    {
+      "path": "vendor/HashCalculator.js",
+      "sha256": "9d3a437aa3a75706533a44745f0201f773718be276d4e60bc2d7613ec01ab95a",
+      "textLF": true
+    },
+    {
+      "path": "vendor/LICENSE",
+      "sha256": "a379dd012587a2fbe434ea6fcef30f502f32077738c2bd36e9e20cce621162bb",
+      "textLF": true
+    },
+    {
+      "path": "vendor/RomPatcher.format.bps.js",
+      "sha256": "559ea67eba3532dc5410c3edd7613580e81997e86b10c2ee446e9a82f98e8c1d",
+      "textLF": true
+    },
+    {
+      "path": "worker.js",
+      "sha256": "ca9d9f4e3bee6cc2e7245e528781e2cd4993028cace3c84c86f2e059164cbbad",
+      "textLF": true
+    },
+    {
+      "path": "NOTICE.txt",
+      "sha256": "351ff054e2aa31769e8120c2f3d26043c77f19284fb53d9d87e55e7db8b8176f",
+      "textLF": true
+    }
+  ]
+}
