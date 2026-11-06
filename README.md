@@ -68,17 +68,6 @@ Use the [FireRed Evolv3D web patcher](https://niceliketryce.github.io/FireRed-Ev
 
 Both base revisions produce the same 3DS build. Your ROM stays on your device.
 
-## Development
-
-```sh
-make -C firered_port check       # synthetic host tests; no game data
-make -C firered_port port-check  # diagnostic 3DSX; requires devkitPro
-```
-
-See [the adapter guide](firered_port/README.md) and
-[current development notes](docs/CHANGELOG.txt). The SDK image and upstream
-revision are pinned in [port.lock.json](firered_port/port.lock.json).
-
 ## Upstream reference
 
 The existing `3ds_port/`, `builder/` and Emerald documentation are retained from
