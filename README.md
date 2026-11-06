@@ -2,9 +2,15 @@
 
 FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
 
-Current beta: **v0.2.37**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
+Current beta: **v0.2.38**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
 
 ## Major features
+
+- **HOME Menu launcher** — Install an original icon/banner with an FBI QR code.
+- **Wireless setup** — Transfer your verified generated game over home Wi-Fi.
+- **In-game updates** — Apply verified patches with previous-game and save backups.
+- **Photo mode** — Frame voxel scenes with a free camera and export clean PNGs.
+- **Quest journal** — Read story, Celio, Mew/Celebi and Frontier progress.
 
 - **Postgame Gen3 support** — Trade Gen3 Pokémon and legal held items after Celio’s Ruby/Sapphire quest; restore incense breeding and National Dex entries.
 
@@ -57,7 +63,8 @@ Use the [FireRed Evolv3D web patcher](https://niceliketryce.github.io/FireRed-Ev
 
 1. Bring your own clean US/English FireRed v1.0 or v1.1 ROM.
 2. Open the [3DS web patcher](https://niceliketryce.github.io/FireRed-Evolv3D/) and select your ROM. The patcher detects the revision automatically.
-3. Choose **Build and download .3dsx**. Open the downloaded file in Azahar, or copy it to `/3ds/FireRedEvolved/` on your Nintendo 3DS SD card and open it from the Homebrew Launcher.
+3. Choose **Build and download .3dsx**. Open it in Azahar, or follow the [3DS installation guide](https://niceliketryce.github.io/FireRed-Evolved/install.html) to scan the HOME launcher QR and transfer your generated game wirelessly.
+4. For later updates, open **Options → General → Tools → Check for updates**. The game saves before handing control to the launcher. Recovery keeps your current progress.
 
 Both base revisions produce the same 3DS build. Your ROM stays on your device.
 

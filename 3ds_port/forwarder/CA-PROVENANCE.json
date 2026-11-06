@@ -1,0 +1,8 @@
+{
+  "source": "https://curl.se/ca/cacert.pem",
+  "published_sha256": "https://curl.se/ca/cacert.pem.sha256",
+  "sha256": "427c064216761a1e72a8b30f0d954d08cb6e4435a82091fb865afd20c8497285",
+  "bytes": 200116,
+  "scope": "Public Mozilla CA trust bundle; no private or local proxy certificate is added",
+  "license": "Mozilla Public License2.0; certificate data extracted by curl mk-ca-bundle"
+}

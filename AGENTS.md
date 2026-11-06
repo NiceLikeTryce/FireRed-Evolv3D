@@ -1,5 +1,12 @@
 # FireRed Evolv3D source and browser patcher
 
+November 6, 2026 owner request: deliver the generic HOME Menu launcher CIA,
+its QR and the local wireless companion alongside the approved patch data.
+These tools contain only platform code, original branding and public runtime
+notices/certificates. This exception permits these generic tool binaries in
+public release/Pages downloads; it does not permit a full prebuilt game image,
+FireRed source/assets, retail ROMs or saves. Keep game integration private.
+
 November 5, 2026 owner approval: publish the verified FireRed Evolv3D native
 patch-data package and deploy its public browser patcher through a Pages-only
 workflow. This explicitly permits the qualified generated patch payloads and

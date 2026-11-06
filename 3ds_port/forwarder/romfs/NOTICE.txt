@@ -1,0 +1,14 @@
+FireRed Evolv3D launcher and update service
+Original service code and artwork: MIT, copyright2026 NiceLikeTryce contributors.
+HOME Menu forwarding adapted from Emerald 3DS by Zallax and contributors,
+https://github.com/ZallaxDev/emerald-3ds at bcae4b70dac61419fc933084084469f6cfbe344b.
+This adaptation is CC BY-NC-SA4.0: attribution, noncommercial, share alike.
+Changes: FireRed identity/paths, native restore integration, original artwork,
+and an independently written patch/update/backup service. Original MIT modules
+and third-party components retain their respective licences.
+JSON parser: jsmn, MIT.
+Networking: libcurl (curl licence), mbedTLS (Apache2.0), zlib (zlib licence), libctru (zlib licence).
+CA trust data: public Mozilla certificates, MPL2.0, extracted by curl.
+No game code, ROM, save or extracted game artwork is included.
+Source: https://github.com/NiceLikeTryce/FireRed-Evolv3D
+Full included licence texts are in romfs:/licenses/.

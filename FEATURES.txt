@@ -53,3 +53,13 @@ Public platform source
 - Consistent presentation — Red Poke Ball startup, full intro and stable voxel recap/warp transitions.
 
 - Pallet roofs — Closed voxel house ridges using the original roof artwork.
+
+- HOME Menu launcher — Install an original icon/banner with an FBI QR code.
+
+- Wireless setup — Transfer your verified generated game over home Wi-Fi.
+
+- In-game updates — Apply verified patches with previous-game and save backups.
+
+- Photo mode — Frame voxel scenes with a free camera and export clean PNGs.
+
+- Quest journal — Read story, Celio, Mew/Celebi and Frontier progress.

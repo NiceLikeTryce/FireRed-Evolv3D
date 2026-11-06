@@ -20,6 +20,43 @@ PARTS = {
     'FireRed_Evolv3D_assets_v2_from_BPRE_USA_Rev1.bps.gz'
 }
 
+DOWNLOADS = {
+    'launcher': ('FireRed-Evolv3D-Launcher.cia', 4 * 1024 * 1024),
+    'launcher_qr': ('FireRed-Evolv3D-Launcher-QR.png', 128 * 1024),
+    'wireless': ('FireRed-Evolv3D-Wireless.zip', 64 * 1024 * 1024),
+    'service': ('service.json', 16 * 1024),
+}
+
+
+def extra_assets(manifest):
+    downloads = manifest.get('downloads', {})
+    updates = manifest.get('updates', [])
+    if not downloads and not updates:
+        return []
+    if manifest.get('launcher_abi') != 1 or not isinstance(downloads, dict) or set(downloads) != set(DOWNLOADS):
+        raise ValueError('Invalid source-only installation tool inventory.')
+    result = []
+    for key, (name, limit) in DOWNLOADS.items():
+        entry = downloads[key]
+        if (not isinstance(entry, dict) or entry.get('asset') != name
+                or type(entry.get('size')) is not int or not 1 <= entry['size'] <= limit
+                or not HASH.fullmatch(str(entry.get('sha256', '')))):
+            raise ValueError('Invalid installation download: ' + key)
+        result.append((name, 'service.json' if key == 'service' else 'downloads/' + name, entry))
+    if not isinstance(updates, list) or len(updates) > 8:
+        raise ValueError('Invalid update patch inventory.')
+    seen = set()
+    for entry in updates:
+        name = entry.get('asset', '') if isinstance(entry, dict) else ''
+        if (not re.fullmatch(r'FireRed-Evolv3D-v[0-9]+\.[0-9]+\.[0-9]+-to-v[0-9]+\.[0-9]+\.[0-9]+\.bps', name)
+                or name in seen or type(entry.get('size')) is not int
+                or not 16 <= entry['size'] <= MAX_PART
+                or not HASH.fullmatch(str(entry.get('sha256', '')))):
+            raise ValueError('Invalid incremental game patch.')
+        seen.add(name)
+        result.append((name, 'assets/' + name, entry))
+    return result
+
 
 def command(arguments):
     return subprocess.check_output(arguments, cwd=ROOT).decode('utf-8')
@@ -46,6 +83,7 @@ def validate_manifest(manifest, allow_local=False):
             raise ValueError('Invalid release asset size.')
         if not HASH.fullmatch(str(descriptor.get('sha256', ''))):
             raise ValueError('Invalid release asset hash.')
+    extra_assets(manifest)
     return manifest
 
 
@@ -116,6 +154,11 @@ def download_release(tag, destination):
             raise ValueError(f'Release asset size differs: {name}')
         command(['gh', 'release', 'download', tag, '--repo', REPOSITORY,
                  '--pattern', name, '--dir', str(destination)])
+    for name, _, descriptor in extra_assets(manifest):
+        if name not in assets or assets[name]['size'] != descriptor['size']:
+            raise ValueError('Installation tool asset differs: ' + name)
+        command(['gh', 'release', 'download', tag, '--repo', REPOSITORY,
+                 '--pattern', name, '--dir', str(destination)])
     return manifest
 
 
@@ -125,6 +168,24 @@ def assemble_site(manifest, payloads, destination):
     (destination / 'assets').mkdir()
     for name, descriptor in manifest['parts'].items():
         copy_asset(payloads / name, destination / 'assets' / name, descriptor)
+    for name, relative, descriptor in extra_assets(manifest):
+        target = destination / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        copy_asset(payloads / name, target, descriptor)
+    if manifest.get('downloads'):
+        service = json.loads((destination / 'service.json').read_text(encoding='utf-8'))
+        if (service.get('schema') != 1 or service.get('application') != 'FireRed-Evolv3D'
+                or service.get('version') != manifest['version']
+                or service.get('output') != manifest['output']
+                or not isinstance(service.get('patches'), list) or len(service['patches']) > 8):
+            raise ValueError('Native update service differs from the qualified game.')
+        entries = {entry['asset']: entry for entry in manifest.get('updates', [])}
+        if {entry.get('asset') for entry in service['patches']} != set(entries):
+            raise ValueError('Native service patch set differs.')
+        for entry in service['patches']:
+            part = entries[entry['asset']]
+            if (entry.get('size'), entry.get('sha256')) != (part['size'], part['sha256']):
+                raise ValueError('Native service patch hash differs.')
     (destination / 'release.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
     if manifest['distribution_scope'] == 'public-patch-data':
         index = destination / 'index.html'

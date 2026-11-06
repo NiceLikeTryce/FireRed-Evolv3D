@@ -1,0 +1,22 @@
+[
+  {
+    "file": "MPL-2.0.txt",
+    "url": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/MPL-2.0.txt",
+    "sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172"
+  },
+  {
+    "file": "curl-COPYING.txt",
+    "url": "https://raw.githubusercontent.com/curl/curl/curl-8_4_0/COPYING",
+    "sha256": "b1d7feb949ea5023552029fbe0bf5db4f23c2f85e9b8e51e18536f0ecbf9c524"
+  },
+  {
+    "file": "mbedTLS-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.0/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "file": "zlib-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/madler/zlib/v1.3.1/LICENSE",
+    "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+  }
+]

@@ -1,0 +1,17 @@
+# Keep the verified public CA bytes and original artwork unchanged.
+romfs/ca-bundle.pem -text
+artwork/*.png -text
+artwork/*.wav -text
+*.md text eol=lf
+*.json text eol=lf
+source/** text eol=lf
+integration/** text eol=lf
+romfs/*.txt text eol=lf
+romfs/licenses/** text eol=lf
+licenses/** text eol=lf
+# Retain exact upstream legal text and vendored parser formatting.
+licenses/** -whitespace
+romfs/licenses/** -whitespace
+source/vendor/** linguist-vendored -whitespace
+Makefile text eol=lf
+forwarder.rsf text eol=lf

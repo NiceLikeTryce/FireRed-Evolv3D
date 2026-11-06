@@ -1,3 +1,24 @@
+FireRed Evolv3D v0.2.38
+
+LATEST CHANGES
+- Add a HOME Menu launcher with original icon, banner and installation QR.
+- Add local wireless installation of the user-generated game.
+- Add verified in-game patch updates, retained game versions, save snapshots and recovery.
+- Add voxel photo framing, HUD hiding and PNG export.
+- Add read-only story, Celio, exact Mew/Celebi and Frontier journal tabs.
+- Keep shared gameplay and the GBA build at v0.2.36.
+
+CURRENT BUILD SCOPE
+Native-only services/UI update; no new GBA game bytes or altered encounter/event data.
+Original saves remain in /3ds/FireRedEvolved/. HOME executable path is
+/3ds/FireRed-Evolv3D/FireRed-Evolv3D.3dsx; backups stay beside that executable.
+First setup still builds from the owner's clean FireRed ROM. No complete game
+image is included in the generic launcher or wireless companion. Public game
+updates are patch data. Native validation Actions remain disabled.
+Scoped local ordinary/diagnostic builds, ARM/native UI and file update checks;
+retained unchanged world/campaign/save/Old-model qualification. No new cloud or
+physical-device validation claim. Removed former task8 is not implemented.
+
 FireRed Evolv3D v0.2.37
 - Close the Pallet player/rival house roof ridge below the transparent artwork margin.
 - Preserve roof/facade artwork, house placements, collisions, saves and v0.2.36 shared gameplay.

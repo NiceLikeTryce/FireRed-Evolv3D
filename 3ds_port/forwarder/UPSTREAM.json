@@ -1,0 +1,26 @@
+{
+  "repository": "ZallaxDev/emerald-3ds",
+  "commit": "bcae4b70dac61419fc933084084469f6cfbe344b",
+  "files": [
+    {
+      "path": "3ds_port/forwarder/source/main.c",
+      "sha256": "7e9df32dc3ca7131bcc0758de6f796427cd66ead48dc686592721bd587af85c3"
+    },
+    {
+      "path": "3ds_port/forwarder/Makefile",
+      "sha256": "d59f04d7e80099b58f18d86af892d0234bd3a0ebc291a0f76026fdd6d3389cf4"
+    },
+    {
+      "path": "3ds_port/forwarder/forwarder.rsf",
+      "sha256": "8f973b5ab1516ba7b560162ac46b56636566c6b4a47f193180208c2b35274501"
+    },
+    {
+      "path": "3ds_port/forwarder/.gitignore",
+      "sha256": "5dc1cdcb5b4708cff0735f2a7f61dca22e28f04e62e6ca54ea0958f8d527e2e5"
+    },
+    {
+      "path": "LICENSE-PORT.md",
+      "sha256": "a8e3f9b65e9cacdb6396ff0c08eda0a487938cafd1c668c8712a2e153a0fb1e6"
+    }
+  ]
+}

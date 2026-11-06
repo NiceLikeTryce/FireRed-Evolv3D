@@ -1,21 +1,26 @@
-// HOME Menu forwarder for Emerald 3DS.
+// SPDX-License-Identifier: CC-BY-NC-SA-4.0
+// Adapted from Emerald 3DS by Zallax and contributors; see ../UPSTREAM.json
+// and ../LICENSE-PORT.md. Changed paths, identity, branding and update service.
+// HOME Menu forwarder for FireRed Evolv3D.
 //
-// Installed once as a CIA, it starts sdmc:/3ds/emerald3ds/Emerald3DS.3dsx, so
+// Installed once as a CIA, it starts sdmc:/3ds/FireRed-Evolv3D/FireRed-Evolv3D.3dsx, so
 // updating the game only ever replaces the 3DSX. It asks Luma3DS's hb:ldr to
 // load that file, makes its own title the one Luma loads 3DSX files through
 // (no Homebrew Launcher title has to be installed) and restarts itself, so Luma
 // starts the game in its place. The game puts Luma's previous title back as
-// soon as it starts (main_3ds.c), so the next start runs this code again.
+// soon as it starts (the native launcher-restore hook), so the next start
+// runs this code again.
 
 #include <3ds.h>
 #include <stdio.h>
 #include <string.h>
 #include <sys/stat.h>
+#include "service.h"
 
-#define TARGET_SD_PATH "/3ds/emerald3ds/Emerald3DS.3dsx"
+#define TARGET_SD_PATH "/3ds/FireRed-Evolv3D/FireRed-Evolv3D.3dsx"
 #define TARGET_ARGV0   "sdmc:" TARGET_SD_PATH
-#define RESTORE_ARG    "emerald3ds-forwarder:hbldr-tid="
-#define FORWARDER_TID  0x000400000E3D5200ULL
+#define RESTORE_ARG    "firered-evolv3d-forwarder:hbldr-tid="
+#define FORWARDER_TID  0x000400000F3D0100ULL
 
 // Luma3DS shared config page (private layout, stable since v10).
 typedef struct {
@@ -69,8 +74,8 @@ static Result Forward(const char **why, u64 *chainTid)
     if (stat(TARGET_ARGV0, &st) != 0)
     {
         *why = "The game is not on the SD card.\n\n"
-               "Copy the 3ds folder of your installation ZIP\n"
-               "to the root of the SD card, so that this file\n"
+               "Build your game with the FireRed Evolv3D patcher.\n"
+               "Copy or wirelessly install the resulting game so this file\n"
                "exists:\n\n  " TARGET_ARGV0;
         return -1;
     }
@@ -115,32 +120,19 @@ int main(void)
 {
     const char *why = NULL;
     u64 chainTid = 0;
-    Result res = Forward(&why, &chainTid);
-
-    if (R_SUCCEEDED(res))
-    {
-        aptSetChainloader(chainTid, MEDIATYPE_SD);
-        return 0;
+    unsigned request=FreService_ConsumeRequest();
+    struct stat pending;
+    if(stat(FRE_APP_ROOT "/.update/intent.bin",&pending)==0)request=3;
+    hidScanInput();
+    if(!request&&!(hidKeysHeld()&KEY_SELECT)&&FreService_GamePresent()){
+        if(R_SUCCEEDED(Forward(&why,&chainTid))){aptSetChainloader(chainTid,MEDIATYPE_SD);return 0;}
     }
-    else
-    {
-        gfxInitDefault();
-        consoleInit(GFX_TOP, NULL);
-        printf("\n Emerald 3DS\n\n");
-        printf(" %s\n", why);
-        if (res != -1)
-            printf("\n Error 0x%08lX\n", (unsigned long)res);
-        printf("\n\n Press START to exit.\n");
-        while (aptMainLoop())
-        {
-            hidScanInput();
-            if (hidKeysDown() & KEY_START)
-                break;
-            gfxFlushBuffers();
-            gfxSwapBuffers();
-            gspWaitForVBlank();
-        }
+    if(!why&&!request&&!FreService_GamePresent())why="Install your generated game with Setup, or use Check for updates for an older installed copy.";
+    for(;;){
+        if(!FreService_Run(why,request))break;
+        request=0;
+        if(!FreService_GamePresent())why="Install or update your generated game first. Open Setup for wireless installation.";
+        else if(R_SUCCEEDED(Forward(&why,&chainTid))){aptSetChainloader(chainTid,MEDIATYPE_SD);return 0;}
     }
-    gfxExit();
     return 0;
 }

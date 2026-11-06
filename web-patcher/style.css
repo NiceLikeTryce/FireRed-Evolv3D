@@ -12,3 +12,7 @@ button.theme-toggle{margin:0;width:auto;flex-shrink:0;padding:8px 12px;border:1p
 a{color:var(--link)}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #c58925;outline-offset:3px}.small,footer{font-size:.87rem;color:var(--muted)}footer{margin-top:26px}
 #status{min-height:24px;margin-bottom:0}#status[data-state=error]{color:var(--error)}#status[data-state=success]{color:var(--success)}
 @media(max-width:420px){body{padding-top:22px}section{padding:18px}.topbar{gap:12px}}
+
+.install-card{padding:1.5rem;margin:1.5rem 0;border:1px solid var(--border,#76392d);border-radius:18px;background:var(--surface,#241414)}
+.install-qr{display:block;width:280px;max-width:85%;height:auto;background:white;padding:12px;image-rendering:pixelated}
+.install-qr[hidden]{display:none}.install-link{display:inline-block;padding:.7rem 1rem;border-radius:10px;background:#922c20;color:#fff3e6;text-decoration:none}

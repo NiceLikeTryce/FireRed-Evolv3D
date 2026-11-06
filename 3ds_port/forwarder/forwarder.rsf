@@ -1,12 +1,12 @@
 # makerom spec of the HOME Menu forwarder (see Makefile).
 BasicInfo:
-  Title                   : "Emerald3DS"
-  ProductCode             : "CTR-H-EM3D"
+  Title                   : "FRE3D"
+  ProductCode             : "CTR-H-FR3D"
   Logo                    : Homebrew
 
 TitleInfo:
   Category                : Application
-  UniqueId                : 0xE3D52
+  UniqueId                : 0xF3D01
 
 Option:
   UseOnSD                 : true
@@ -14,6 +14,9 @@ Option:
   MediaFootPadding        : false
   EnableCrypt             : false
   EnableCompress          : true
+
+RomFs:
+  RootPath                : romfs
 
 AccessControlInfo:
   CoreVersion                   : 2
