@@ -26,7 +26,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: ${{ inputs.release_tag }}
+          # Gallery/docs updates use this reviewed main commit. Game payloads
+          # still come from the explicit release tag and pass all hash gates.
+          ref: ${{ github.sha }}
           persist-credentials: false
       - uses: actions/configure-pages@v5
       - name: Prepare the verified release site

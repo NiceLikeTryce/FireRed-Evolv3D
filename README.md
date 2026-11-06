@@ -80,7 +80,7 @@ for Pokémon Emerald. The platform code is distributed under the scoped
 
 ## Gameplay gallery
 
-![Native voxel overworld](web-patcher/gallery/native-overworld.png)
+![Pallet Town house with corrected voxel roof](web-patcher/gallery/pallet-house-roof.png)
 
 ![Native voxel battle](web-patcher/gallery/native-battle.png)
 

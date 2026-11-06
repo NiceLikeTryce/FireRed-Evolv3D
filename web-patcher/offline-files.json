@@ -32,6 +32,11 @@
       "textLF": false
     },
     {
+      "path": "gallery/pallet-house-roof.png",
+      "sha256": "a32f8ec52a005b34a928c53b67a2e21cfeec0a311e5391dfdc73c652f76d30ec",
+      "textLF": false
+    },
+    {
       "path": "GBAGFX-LICENSE.txt",
       "sha256": "49f7647d391dc12a0f0f552a295111337337a022fd057b624364521871375c95",
       "textLF": true
