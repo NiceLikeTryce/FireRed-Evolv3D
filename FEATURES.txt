@@ -87,3 +87,6 @@ Optional native controls
 - Smooth field toggle — Glide and crossfade between voxel and classic views; reverse the motion with another toggle.
 
 - Stable menu handoffs — Native menus retain their view while loading, and the top field or arena stays consistent through menu changes.
+
+- Options help — Open a setting explanation, default and controls from its question mark or SELECT.
+- Update notes — Read what changed before confirming in the HOME Menu launcher.

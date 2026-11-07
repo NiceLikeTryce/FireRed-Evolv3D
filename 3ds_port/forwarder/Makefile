@@ -26,7 +26,7 @@ APP_TITLE := FireRed Evolv3D
 APP_SHORT := FireRed Evolv3D
 APP_AUTHOR := NiceLikeTryce
 # Shown by FBI and the HOME Menu; bump with the forwarder, not with the game.
-APP_VERSION ?= 1.0.0
+APP_VERSION ?= 1.1.0
 CIA := dist/FireRed-Evolv3D-Launcher.cia
 
 all: $(CIA)

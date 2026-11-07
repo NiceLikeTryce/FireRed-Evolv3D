@@ -1,3 +1,21 @@
+FireRed Evolv3D v0.2.44
+CURRENT VERSION: v0.2.44
+
+LATEST CHANGES
+- Add Options help for each setting, its default and controls.
+- Show release notes in the launcher before confirming an update.
+
+CURRENT BUILD SCOPE
+Tap a question mark beside a setting, or press SELECT on a focused row.
+B returns from help to Options. Help uses the existing native bottom renderer.
+Launcher 1.1.0 reads bounded optional release notes in the schema 1 service
+feed. The existing update confirmation and verified patch transaction remain.
+Install the updated launcher using the same HOME Menu QR to see release notes.
+Older launchers can still use the update feed and older feeds work in the
+updated launcher. Native-only delivery. Matching v0.2.44 GBA package retains
+the exact v0.2.36 game and BPS files. Native validation Actions stay disabled.
+
+PRESERVED PREVIOUS HISTORY
 FireRed Evolv3D v0.2.43
 CURRENT VERSION: v0.2.43
 

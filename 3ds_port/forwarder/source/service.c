@@ -123,7 +123,18 @@ static void Draw(unsigned page,bool busy,const char *phase,const char *message,u
     if(busy){printf("%s\n\n",phase[0]?phase:"Preparing");if(total>1)printf("%llu%%\n",(unsigned long long)(100*progress/total));else printf("Working %c\n","|/-\\"[(tick/8)&3]);}
     else if(page==SETUP_PAGE)printf("FIRST-TIME SETUP\n\n1. Build your game on a computer or phone:\n\n niceliketryce.github.io/FireRed-Evolv3D/\n\n2. Open the wireless companion on your PC.\n\n3. In FBI, scan its game QR code.\n\n4. Return here and choose Play.\n\nThe computer and 3DS must share home Wi-Fi.\nThe original ROM is needed only by the builder.");
     else if(page==RECOVERY_CONFIRM)printf("RESTORE PREVIOUS GAME?\n\nYour current game will be retained as a backup.\nYour current save and sidecars will stay in place.\n\nA: Restore previous game\nB: Back");
-    else{printf("%s\n\n",message);if(page==AVAILABLE)printf("%s -> %s\n\nA: Save backup and update\nB: Back",s.manifest.patch[s.selected].from_version,s.manifest.version);else if(page==CURRENT||page==UPDATED)printf("A: Play\nB: Back");else if(page==ERROR_PAGE)printf("B: Back\nX: Retry update check");else printf("A: Play\nX: Check for updates\nY: Recovery\nSELECT: Setup\nSTART: Exit");}
+    else if (page == AVAILABLE) {
+        printf("UPDATE AVAILABLE\n%s -> %s\n\n", s.manifest.patch[s.selected].from_version, s.manifest.version);
+        if (s.manifest.note_count) {
+            puts("WHAT'S NEW");
+            for (unsigned i = 0; i < s.manifest.note_count; ++i)
+                puts(s.manifest.notes[i]);
+        } else {
+            puts("Release notes are unavailable.");
+        }
+        printf("\nA: Save backup and update\nB: Back");
+    }
+    else{printf("%s\n\n",message);if(page==CURRENT||page==UPDATED)printf("A: Play\nB: Back");else if(page==ERROR_PAGE)printf("B: Back\nX: Retry update check");else printf("A: Play\nX: Check for updates\nY: Recovery\nSELECT: Setup\nSTART: Exit");}
     consoleSelect(&sBottom);printf("\x1b[2J\x1b[1;37;41m");
     if(busy)printf("\x1b[12;7H  %s  ",phase[0]?phase:"Preparing");
     else if(page==MENU)printf("\x1b[4;8H        A PLAY        \x1b[11;8H   X CHECK UPDATES    \x1b[18;8H      Y RECOVERY      \x1b[25;8H      SETUP           ");

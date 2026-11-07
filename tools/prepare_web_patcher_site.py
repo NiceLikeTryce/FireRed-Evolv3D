@@ -179,6 +179,12 @@ def assemble_site(manifest, payloads, destination):
                 or service.get('output') != manifest['output']
                 or not isinstance(service.get('patches'), list) or len(service['patches']) > 8):
             raise ValueError('Native update service differs from the qualified game.')
+        notes = service.get('notes', [])
+        if (not isinstance(notes, list) or len(notes) > 8
+                or any(not isinstance(line, str) or not 1 <= len(line) <= 46
+                       or any(not 32 <= ord(char) <= 126 or char in ('"', chr(92)) for char in line)
+                       for line in notes)):
+            raise ValueError('Native update notes must fit the launcher confirmation screen.')
         entries = {entry['asset']: entry for entry in manifest.get('updates', [])}
         if {entry.get('asset') for entry in service['patches']} != set(entries):
             raise ValueError('Native service patch set differs.')

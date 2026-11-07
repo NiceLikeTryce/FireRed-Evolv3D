@@ -4,6 +4,8 @@
 #include "update_core.h"
 #define FRE_SERVICE_PATCHES 8
 #define FRE_SERVICE_JSON_BYTES 16384
+#define FRE_SERVICE_NOTE_LINES 8
+#define FRE_SERVICE_NOTE_WIDTH 46
 typedef struct {
     char from_version[32],asset[128];
     uint64_t source_bytes,patch_bytes;
@@ -12,6 +14,8 @@ typedef struct {
 typedef struct {
     char version[32];uint64_t game_bytes;unsigned char game_sha[32];
     unsigned patch_count;FreServicePatch patch[FRE_SERVICE_PATCHES];
+    unsigned note_count;
+    char notes[FRE_SERVICE_NOTE_LINES][FRE_SERVICE_NOTE_WIDTH + 1];
 } FreServiceManifest;
 bool FreService_ParseManifest(const char *json,size_t bytes,FreServiceManifest *out);
 #endif

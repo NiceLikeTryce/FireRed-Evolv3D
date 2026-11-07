@@ -115,5 +115,21 @@ bool FreService_ParseManifest(const char *text,size_t bytes,FreServiceManifest *
         for(unsigned i=0;i<out->patch_count;i++)if(FreHashEqual(out->patch[i].source_sha,p->source_sha))return false;
         out->patch_count++;
     }
-    return out->patch_count==(unsigned)j.token[patches].size;
+    if (out->patch_count != (unsigned)j.token[patches].size)
+        return false;
+    /* Optional display text. Older manifests and malformed notes keep the
+     * normal update confirmation. Text rejects controls and JSON escapes. */
+    int notes = Property(&j, 0, "notes");
+    if (notes >= 0 && j.token[notes].type == JSMN_ARRAY
+        && j.token[notes].size <= FRE_SERVICE_NOTE_LINES) {
+        for (int at = notes + 1; at < j.count && j.token[at].start < j.token[notes].end; at = Skip(&j, at)) {
+            if (out->note_count >= FRE_SERVICE_NOTE_LINES
+                || !Text(&j, at, out->notes[out->note_count], sizeof(out->notes[0]))) {
+                out->note_count = 0;
+                break;
+            }
+            ++out->note_count;
+        }
+    }
+    return true;
 }
