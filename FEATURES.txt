@@ -88,5 +88,5 @@ Optional native controls
 
 - Stable menu handoffs — Native menus retain their view while loading, and the top field or arena stays consistent through menu changes.
 
-- Options help — Open a setting explanation, default and controls from its question mark or SELECT.
+- Options help — Press SELECT to see the focused setting’s purpose, default and controls.
 - Update notes — Read what changed before confirming in the HOME Menu launcher.

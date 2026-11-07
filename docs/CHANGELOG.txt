@@ -1,3 +1,16 @@
+FireRed Evolv3D v0.2.45
+CURRENT VERSION: v0.2.45
+
+LATEST CHANGES
+- Open Options help only with SELECT.
+
+CURRENT BUILD SCOPE
+Remove the question-mark buttons and restore the original touch row targets.
+SELECT opens help for the focused setting. B returns to Options.
+Launcher 1.1.0 continues to display release notes before update confirmation.
+Public GBA package v0.2.45 retains exact v0.2.36 game and BPS bytes.
+
+PRESERVED PREVIOUS HISTORY
 FireRed Evolv3D v0.2.44
 CURRENT VERSION: v0.2.44
 
