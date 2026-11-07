@@ -1,3 +1,41 @@
+FireRed Evolv3D v0.2.43
+CURRENT VERSION: v0.2.43
+
+LATEST CHANGES
+- Keep the current native bottom menu visible during loading, fades and page changes.
+- Preserve the top-screen view through menu entry, field reload and battle Bag/Party returns.
+- Keep Classic Menus, explicit 2D mode and original special-selection screens working.
+
+CURRENT BUILD SCOPE
+Fix transient view ownership, without changing gameplay, saves or world geometry.
+Modern child initialization no longer falls through to the old picture renderer.
+The native canvas is retained while original tasks/palettes/cache resources prepare
+the next view. Input never falls back to obsolete hit targets during a handoff.
+Classic Menus and original-only special party/bag/Dex contents/reward screens keep
+their legitimate source UI. Their menu type is assigned before the init callback.
+
+Classify original field-return callbacks read-only, including the static local/link
+reload functions. Re-evaluate the menu hold after the game callback ran; retain it
+through loading instead of expiring after40frames. Keep the last completed top view
+in both classic-field and voxel modes, and cover actual geometry warmup with the
+existing600-frame error bound. Field dialogue and real warp covers retain ownership.
+Keep a completed voxel battle arena while Bag/Party own the original callback/VRAM,
+then release when the arena renderer is ready. Real move backgrounds are not frozen.
+
+Native emulator traces reproduced17original-menu frames in the released Party
+handoff. The fixed field matrix covered1573renderedframes with no unintended
+source fallback or top pixel flashes. Separate final/Old-model checks cover the
+changed source-mode guard, Classic/2D preferences, battle menus, reset and Continue.
+Retain unchanged world, camera-transition, Pokedex device and gameplay qualification.
+Fresh compilation of changed units in two roles produces matching complete ordinary
+and diagnostic programs; no new cloud/physical-device claim. Native validation
+Actions remain manually disabled; only Pages/Discord delivery is used.
+
+Shared GBA game and BPS bytes remain exactv0.2.36; public package aliasv0.2.43.
+Copy the qualified ordinary3DSX to the desktop TESTING AREA with versioned and latest
+names, verified hashes and previous-build retention before completing delivery.
+
+PRESERVED PREVIOUS HISTORY
 FireRed Evolv3D v0.2.42
 CURRENT VERSION: v0.2.42
 

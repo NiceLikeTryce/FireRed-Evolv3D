@@ -85,3 +85,5 @@ Optional native controls
 
 - Pokédex device — View the selected Pokémon over its FireRed habitat on the top screen.
 - Smooth field toggle — Glide and crossfade between voxel and classic views; reverse the motion with another toggle.
+
+- Stable menu handoffs — Native menus retain their view while loading, and the top field or arena stays consistent through menu changes.
