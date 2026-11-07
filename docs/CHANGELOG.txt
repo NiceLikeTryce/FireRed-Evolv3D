@@ -1,3 +1,43 @@
+FireRed Evolv3D v0.2.42
+CURRENT VERSION: v0.2.42
+
+LATEST CHANGES
+- Add the top-screen Pokédex device, selected Pokémon and FireRed habitat backdrops.
+- Add smooth, reversible camera motion and crossfades between voxel and classic field views.
+- Keep the device name in the original FireRed font and clear its scene on reset.
+
+CURRENT BUILD SCOPE
+Adapt the released Emerald3DS v0.5.0 device renderer and pure camera-transition
+timing from bcae4b70dac61419fc933084084469f6cfbe344b under CC BY-NC-SA 4.0.
+Retain original donor sources, licence and attribution in donors/emerald05_visual.
+FireRed's existing native Dex view selects only the available/seen species;
+the original front sprites and battle terrain supply the device window.
+Grass/cave/water habitats come from the first matching encounter terrain,
+with the donor type fallback for species without a matching wild table.
+List, info, area, cry and size pages share the device; a brief page-change hold
+avoids blinking. Native textures are allocated on demand and released on exit.
+New-model stereo separates sprite and terrain depth; Old-model mode stays mono.
+The label uses the original normal font, and front sprites use nearest 2x pixels.
+
+The deliberate field view toggle uses released donor easing and a reversible
+position, a temporary camera copy and a bounded 128KiB crossfade texture.
+Camera tracking, its 44-byte ABI, world geometry/chunks, source collision and
+dialogue remain intact. A modal takes original ownership and safely settles
+to the selected view. Battles, door/stair fades, recap and photo mode retain
+their own presentation; scenery warmup does not consume an incoming swoop.
+Old-model Performance retains its bounded render cadence after the already
+planned entry frame. No physical-device or new cloud qualification is claimed.
+Soft reset hides SDK device state even though the game BSS snapshot is restored.
+
+Shared gameplay, encounter rules, rewards, save ABI and GBA game/patch bytes
+remain the exact qualified v0.2.36 baseline. The matching public GBA package
+is v0.2.42; unchanged GBA game bytes are not relabelled as a new native build.
+All prior options/defaults remain. Translations and true voxel Pokémon models
+stay owner-cancelled; historical Task96 stays paused. This scoped visual delivery
+does not claim whole-game or all-upstream-core parity. Native validation Actions
+stay manually disabled; only scoped Pages and Discord delivery are used.
+
+PRESERVED PREVIOUS HISTORY
 FireRed Evolv3D v0.2.41
 CURRENT VERSION: v0.2.41
 

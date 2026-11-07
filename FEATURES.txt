@@ -82,3 +82,6 @@ Optional native controls
 - Clock sync — Restore the real clock without discarding earned berry growth.
 - Soft reset — L+R+START+SELECT uses the protected original reset flow.
 - Gameplay enhancements and cheats start OFF; speeds start 1× and real-time pacing starts ON.
+
+- Pokédex device — View the selected Pokémon over its FireRed habitat on the top screen.
+- Smooth field toggle — Glide and crossfade between voxel and classic views; reverse the motion with another toggle.
