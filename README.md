@@ -2,7 +2,7 @@
 
 FireRed Evolv3D brings FireRed Evolved to native Nintendo 3DS homebrew.
 
-Current beta: **v0.2.40**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
+Current beta: **v0.2.41**, synchronized with FireRed Evolved’s shared encounter rules and event scripts.
 
 ## Major features
 
@@ -27,6 +27,20 @@ Current beta: **v0.2.40**, synchronized with FireRed Evolved’s shared encounte
 - **Berry gardening** — Plant, water, and harvest berries with the Goldeen Canteen.
 
 ## Minor features
+
+- **Separate speed controls** — Choose overworld speed and independent 1–4× battle speed.
+- **HM assist** — Use earned HMs without learning moves; badges and location rules still apply.
+- **Party EXP Share** — Optional full participant and half bench EXP.
+- **Physical/special split** — Optional Generation IV move categories and matching battle AI.
+- **Reusable TMs** — Optional preservation after successful teaching, including replaced moves.
+- **Catch EXP** — Optional experience and normal level-ups after catching.
+- **Real-time pacing** — Bounded field presentation skips reduce slowdowns.
+- **Classic Menus** — Switch between native menus and the original game screens.
+- **Optional cheats** — Encounter/shiny rates, catches, items, money, eggs, victories and Dex tools.
+- **Clock sync** — Restore the real clock without discarding earned berry growth.
+- **Soft reset** — L+R+START+SELECT uses the protected original reset flow.
+
+Gameplay enhancements and cheats default **OFF**. Speeds start at **1×**; real-time pacing defaults **ON**.
 
 - **Crisp battle HUD** — Native-resolution names, levels, HP/status and animated bars.
 

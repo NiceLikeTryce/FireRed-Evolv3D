@@ -1,3 +1,37 @@
+FireRed Evolv3D v0.2.41
+CURRENT VERSION: v0.2.41
+
+LATEST CHANGES
+- Add separate battle 1–4× R/L controls and overworld 1–4× speed selection.
+- Add optional HM assist, party EXP Share, physical/special split and reusable TMs.
+- Add optional catch EXP through the original level-up flow.
+- Add real-time pacing, Classic Menus and explicit clock synchronization.
+- Add optional encounter/shiny/catch/item/Dex/money/egg/victory controls.
+- Add L+R+START+SELECT reset with original save/wireless protections.
+
+CURRENT BUILD SCOPE
+Native-only optional enhancements. Gameplay/cheat defaultsOFF, normal speed1x;
+real-time pacingON. Preserve user settings and original saves. Shared GBA
+game remains the exact v0.2.36 build; coordinated public package aliasv0.2.41.
+Original HM possession, FireRed badges/maps and Celio's Gen3 unlock remain.
+Bulk Dex before Celio fills1–251; after Celio it can fill1–386. No hidden
+Gen3 caught flags are written prequest. Mew/Celebi reward ranges stay1–150
+and1–250. Item giver omits quest gems/tickets and respects legal-item gates.
+Optional combat changes/cheats are disabled in wireless sessions, which use1x.
+Catch/KO/level/move/field/HM/hatch/reward outcomes use the original controllers.
+TM preservation covers all three immediate/replacement learning paths, while
+selling/tossing and other inventory math keep normal behavior. Classic UI
+uses original240x160pixels. Presentation skips keep one-shot X inputs latched.
+Scoped Old-model emulator and actual portable-clock tests cover changed inputs;
+the full frozen ordinary/diagnostic programs match an independent changed-unit
+pair. No new cloud or physical-device claim. Retain unchanged040 geometry,
+HUD/art, original dialogue, saves/history and prior qualification. Native
+validation Actions remain manually disabled; Pages/Discord delivery only.
+Translations were explicitly cancelled by the owner; prior task8 models and
+historical task96 remain cancelled/paused, not relabelled complete.
+Adapt optional Emerald3DSv0.5.0 patches under CC BY-NC-SA4.0, retaining notices.
+
+PRESERVED PREVIOUS HISTORY
 Website battle gallery refresh
 - Show the current outdoor voxel arena and native-resolution battle HUD in both repository and patcher galleries.
 - Game payloads and immutable v0.2.40 release tags stay unchanged.
