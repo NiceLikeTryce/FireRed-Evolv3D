@@ -90,3 +90,7 @@ Optional native controls
 
 - Options help — Press SELECT to see the focused setting’s purpose, default and controls.
 - Update notes — Read what changed before confirming in the HOME Menu launcher.
+
+- Voxel water and flowers animate using the original tileset updates.
+- Full bottom-screen map, native Pokédex contents and current Save layout.
+- Stable menu handoffs and shorter voxel Escape Rope and Dig exits.

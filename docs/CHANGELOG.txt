@@ -1,3 +1,18 @@
+FireRed Evolv3D v0.2.46
+CURRENT VERSION: v0.2.46
+
+LATEST CHANGES
+- Restore native water and flower animation updates.
+- Fill the bottom map and align touch, markers and zoom.
+- Light the Pokédex display and use native Contents.
+- Hold both screens steady during menu handoffs.
+- Bring the Save screen in line with current Emerald3DS.
+- Shorten the voxel Escape Rope and Dig exit.
+
+CURRENT BUILD SCOPE
+The paired GBA package retains the exact v0.2.36 game and patch bytes.
+
+PRESERVED PREVIOUS HISTORY
 FireRed Evolv3D v0.2.45
 CURRENT VERSION: v0.2.45
 
