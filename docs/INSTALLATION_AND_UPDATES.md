@@ -6,6 +6,12 @@ The HOME launcher uses title `000400000F3D0100` and starts
 `/3ds/FireRed-Evolv3D/FireRed-Evolv3D.3dsx`. Saved progress remains in
 `/3ds/FireRedEvolved/`. Installing a generic launcher does not install a game.
 
+The guide compares a selected `.3dsx` with the build hashes in the current
+patcher manifest. The browser reads the file locally. Before replacing the
+game manually, close it and copy the entire `/3ds/FireRedEvolved/` folder
+to a separate location. Leave that folder on the SD card and replace only
+the executable in `/3ds/FireRed-Evolv3D/`.
+
 The Windows wireless companion and included Python source verify the selected
 generated game against release metadata, then share that single file over a
 private LAN with an expiring random URL. Its management page runs on loopback;

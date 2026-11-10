@@ -25,8 +25,19 @@
 <li>Scan the companion’s game QR code in FBI. When FBI finishes, open the FireRed Evolv3D HOME icon.</li></ol>
 <p>Mac/Linux Python source and instructions are included in the ZIP. You can also copy the game to <code>/3ds/FireRed-Evolv3D/FireRed-Evolv3D.3dsx</code> on the SD card.</p></section>
 <section class="install-card" aria-labelledby="update-title"><h2 id="update-title">4. Update from the game</h2>
+<p>Available from the patcher: <strong id="available-build">Checking…</strong></p>
+<label for="installed-game">Check your installed version with the <code>.3dsx</code> from your SD card</label>
+<input id="installed-game" type="file" accept=".3dsx" disabled>
+<p id="installed-version" role="status">The version check runs in this browser. Your file stays on this device.</p>
 <p>Open <strong>Options → General → Tools → Check for updates</strong>. The game saves before opening the launcher. Review the release notes, then confirm the update. Install launcher 1.1.0 using the QR above to see the notes.</p>
 <p>The updater verifies its patch data, keeps the previous game and a save snapshot, then replaces the game. Recovery can restore the previous version while keeping your saved progress.</p>
-<p>Hold SELECT when opening the HOME icon to open its maintenance menu directly.</p></section>
+<p>Hold SELECT when opening the HOME icon to open its maintenance menu directly.</p>
+<h3>Back up and update manually</h3>
+<ol>
+<li>Save in-game and close it. Copy the entire <code>/3ds/FireRedEvolved/</code> folder from the SD card to your computer. It contains your save, settings and backups.</li>
+<li>Build the available version and copy the existing <code>FireRed-Evolv3D.3dsx</code> somewhere safe.</li>
+<li>Rename the new file to <code>FireRed-Evolv3D.3dsx</code> and put it in <code>/3ds/FireRed-Evolv3D/</code>. Leave the save folder in place.</li>
+</ol>
+<p>In Azahar, back up <code>/3ds/FireRedEvolved/</code> in the emulator’s SD card folder, then open the newly built <code>.3dsx</code>.</p></section>
 <p><a href="https://github.com/NiceLikeTryce/FireRed-Evolv3D">FireRed Evolv3D project</a> · <a href="./?platform=3ds">Patcher</a></p>
 </main></body></html>

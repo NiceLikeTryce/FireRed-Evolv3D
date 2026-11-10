@@ -53,17 +53,17 @@
     },
     {
       "path": "index.html",
-      "sha256": "1b32143e863d9c6ddb299d6ecd8e9a993e6bd279fa9f4e3038d41281eaf663ea",
+      "sha256": "6f3ff22936e09b629ade686d3a5e1b810b5a27c0f6b62bde4bf7bc218dcaf723",
       "textLF": true
     },
     {
       "path": "install.html",
-      "sha256": "45ed956beac0f7306ff0f0119a79cfd3c16ecf0b8b00dd42c2d674354bc151d3",
+      "sha256": "ba2ceb2b9a4add5b94d08fb1f123ed65ac1b7f08b6f905cadf0567f835a3d766",
       "textLF": true
     },
     {
       "path": "install.mjs",
-      "sha256": "85a6a731bb25d44c8c0f32a9981039b6321e74696d0d5b8e3745aaaaa5333269",
+      "sha256": "0e0376c57c3426ff5173928e942273b604738a56ffee5b2fa53bec7d51f5b58f",
       "textLF": true
     },
     {
