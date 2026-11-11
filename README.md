@@ -13,9 +13,7 @@ Current beta: **v0.2.46**, synchronized with FireRed Evolved’s shared encounte
 
 ## Major features
 
-- **HOME Menu launcher** — Install an original icon/banner with an FBI QR code.
-- **Wireless setup** — Transfer your verified generated game over home Wi-Fi.
-- **In-game updates** — Apply verified patches with previous-game and save backups.
+
 - **Photo mode** — Frame voxel scenes with a free camera and export clean PNGs.
 - **Quest journal** — Read story, Celio, Mew/Celebi and Frontier progress.
 
@@ -35,6 +33,9 @@ Current beta: **v0.2.46**, synchronized with FireRed Evolved’s shared encounte
 
 ## Minor features
 
+- **HOME Menu launcher** — Install an original icon/banner with an FBI QR code.
+- **Wireless setup** — Transfer your verified generated game over home Wi-Fi.
+- **In-game updates** — Apply verified patches with previous-game and save backups.
 - **Options help** — Press SELECT to see the focused setting’s purpose, default and controls.
 - **Update notes** — Read what changed before confirming in launcher 1.1.0.
 
@@ -42,7 +43,7 @@ Current beta: **v0.2.46**, synchronized with FireRed Evolved’s shared encounte
 
 - **Pokédex device** — See the selected Pokémon and its habitat on the top screen.
 - **Smooth field toggle** — Glide between voxel and classic views, with reversible motion.
-
+- 
 - **Separate speed controls** — Choose overworld speed and independent 1–4× battle speed.
 - **HM assist** — Use earned HMs without learning moves; badges and location rules still apply.
 - **Party EXP Share** — Optional full participant and half bench EXP.
