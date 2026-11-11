@@ -13,11 +13,6 @@ Current beta: **v0.2.46**, synchronized with FireRed Evolved’s shared encounte
 
 ## Major features
 
-
-
-
-- **Postgame Gen3 support** — Trade Gen3 Pokémon and legal held items after Celio’s Ruby/Sapphire quest; restore incense breeding and National Dex entries.
-
 - **All 251 Pokémon** — Catch and collect every Gen 1 and Gen 2 species on one save.
 - **Bigger battle rewards** — Earn bonus items, TMs, and unlocks from Gyms and major battles.
 - **RNG Fix** — Uses Ruby and Sapphire’s clock-based startup seeding.
@@ -37,7 +32,7 @@ Current beta: **v0.2.46**, synchronized with FireRed Evolved’s shared encounte
 - **In-game updates** — Apply verified patches with previous-game and save backups.
 - **Options help** — Press SELECT to see the focused setting’s purpose, default and controls.
 - **Update notes** — Read what changed before confirming in launcher 1.1.0.
-
+- **Postgame Gen3 support** — Trade Gen3 Pokémon and legal held items after Celio’s Ruby/Sapphire quest; restore incense breeding and National Dex entries.
 - **Stable menu handoffs** — Keep the native menu and top-screen view consistent while switching screens.
 - **Photo mode** — Frame voxel scenes with a free camera and export clean PNGs.
 - **Quest journal** — Read story, Celio, Mew/Celebi and Frontier progress.
@@ -58,15 +53,12 @@ Current beta: **v0.2.46**, synchronized with FireRed Evolved’s shared encounte
 Gameplay enhancements and cheats default **OFF**. Speeds start at **1×**; real-time pacing defaults **ON**.
 
 - **Crisp battle HUD** — Native-resolution names, levels, HP/status and animated bars.
-
 - **Visible wild Pokémon** — Optional overworld encounters from the normal area tables.
 - **Reward progress** — See Mew/Celebi catch counts, missing species and habitat links.
 - **Save backups** — Keep rotating verified backups with trainer previews.
 - **Offline patching** — Keep the verified package for use after initial setup.
 - **Modern presentation** — Tabbed Options, a red Poké Ball startup screen and stable voxel transitions.
-
 - **Encounter odds** — Listed rare species have 5%; nighttime grass and trees reserve 5% for Gastly and 1% for Haunter, with the rest shared evenly.
-
 - **A changing world** — Real-time day and night and weather change the scenery.
 - **Habitat Guide** — Look up Pokémon locations, encounter odds, levels, and unlock conditions.
 - **Training tools** — Check IVs and EVs, reuse longer Repels, and hatch eggs faster.
