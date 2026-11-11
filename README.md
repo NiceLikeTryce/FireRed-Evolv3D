@@ -42,8 +42,7 @@ Current beta: **v0.2.46**, synchronized with FireRed Evolved’s shared encounte
 - **Stable menu handoffs** — Keep the native menu and top-screen view consistent while switching screens.
 
 - **Pokédex device** — See the selected Pokémon and its habitat on the top screen.
-- **Smooth field toggle** — Glide between voxel and classic views, with reversible motion.
-- 
+- **Smooth field toggle** — Glide between voxel and classic views, with reversible motion. 
 - **Separate speed controls** — Choose overworld speed and independent 1–4× battle speed.
 - **HM assist** — Use earned HMs without learning moves; badges and location rules still apply.
 - **Party EXP Share** — Optional full participant and half bench EXP.
