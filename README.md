@@ -14,8 +14,7 @@ Current beta: **v0.2.46**, synchronized with FireRed Evolved’s shared encounte
 ## Major features
 
 
-- **Photo mode** — Frame voxel scenes with a free camera and export clean PNGs.
-- **Quest journal** — Read story, Celio, Mew/Celebi and Frontier progress.
+
 
 - **Postgame Gen3 support** — Trade Gen3 Pokémon and legal held items after Celio’s Ruby/Sapphire quest; restore incense breeding and National Dex entries.
 
@@ -40,7 +39,8 @@ Current beta: **v0.2.46**, synchronized with FireRed Evolved’s shared encounte
 - **Update notes** — Read what changed before confirming in launcher 1.1.0.
 
 - **Stable menu handoffs** — Keep the native menu and top-screen view consistent while switching screens.
-
+- **Photo mode** — Frame voxel scenes with a free camera and export clean PNGs.
+- **Quest journal** — Read story, Celio, Mew/Celebi and Frontier progress.
 - **Pokédex device** — See the selected Pokémon and its habitat on the top screen.
 - **Smooth field toggle** — Glide between voxel and classic views, with reversible motion. 
 - **Separate speed controls** — Choose overworld speed and independent 1–4× battle speed.
