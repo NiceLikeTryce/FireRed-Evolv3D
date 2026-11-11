@@ -2,6 +2,7 @@ FireRed Evolv3D v0.2.46
 CURRENT VERSION: v0.2.46
 
 LATEST CHANGES
+- Put the short How to Play guide at the top of the README.
 - The browser installation guide checks the installed build locally and explains manual save backups and updates.
 - Restore native water and flower animation updates.
 - Fill the bottom map and align touch, markers and zoom.
